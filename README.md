@@ -1,4 +1,10 @@
-# PacWar
+#                                         PacWar
+
+
+
+
+
+
 
 
 # Abstract 
@@ -91,7 +97,7 @@ There are different types of levels or labyrinths depending on the number of peo
 https://tree.taiga.io/project/karenmora-pacwar/timeline
 
 
-# Team names 
-Karen Tatiana Mora Merchán
-Sergio Alejandro Peña Pinto
-Andrés Rodríguez del Toro
+# Team names
+- Karen Tatiana Mora Merchán
+- Sergio Alejandro Peña Pinto
+- Andrés Rodríguez del Toro
