@@ -71,11 +71,13 @@ There are different types of levels or labyrinths depending on the number of peo
 
 # Possible statistics
 - General statistics
+
         - games won as a ghost.
         - games won as pac-man.
         - abandoned games.
 
-        - Statistics for each game
+- Statistics for each game
+
         - number of pumps obtained.
         - number of shields obtained.
         - number of fruits obtained.
