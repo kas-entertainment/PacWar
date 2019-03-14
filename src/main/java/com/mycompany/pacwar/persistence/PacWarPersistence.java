@@ -7,8 +7,10 @@ package com.mycompany.pacwar.persistence;
 
 /**
  *
- * @author karen
+ * @author Andres
  */
-public class PacWarPersistence {
-    
+public interface PacWarPersistence {
+    public void addPlayer(String name,String lastname,String mail,String nick,String password) throws PacWarException;
+    public void logIn(String nick,String pass) throws PacWarException;
+    public void logOut()throws PacWarException;
 }
