@@ -9,8 +9,28 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/modern-business.css" rel="stylesheet">
     </head>
-    <body>
-        <div>TODO write content</div>
+    <body style="background-image:url(fondoForm.jpg);background-size: cover">
+        <h1 style="text-align: center; color: #ffffff">INGRESA</h1>
+        <br><br>
+        <header>
+            <div class="container" style="text-align: center">
+                <form name="register" method="POST" style="color: #ffffff" action="">
+                    <label for="nikName">NikName</label>
+                    <input name="nikName" type="text" class="Input" value="" size="17"/>
+                    <br><br>
+                    <label for="password">Password</label>
+                    <input name="password" type="password" class="Input" value="" size="17"/>
+                    <br><br><br>
+                    <a href="perfil.html" class="btn btn-outline-secondary my-2 my-sm-0">Log In</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="index.html" class="btn btn-outline-secondary my-2 my-sm-0">Cancelar</a>
+                </form>
+            </div>
+        </header>
     </body>
 </html>

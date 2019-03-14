@@ -6,11 +6,42 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Registro</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/modern-business.css" rel="stylesheet">
     </head>
-    <body>
-        <div>TODO write content</div>
+    <body style="background-image:url(fondoRegistro.jpg);background-size: cover">
+        <h1 style="text-align: center; color: #ffffff">REGISTRO</h1>
+        <br>
+        <header>
+            <div class="container" style="text-align: center">
+                <form name="register" method="POST" style="color: #ffffff" action="">
+                    <label for="name">Name:</label>
+                    <input name="name" type="text" class="Input" value="" size="20"/>
+                    <br><br>
+                    <label for="lastName">LastName: </label>
+                    <input name="lastName" type="text" class="Input" value="" size="17"/>
+                    <br><br>
+                    <label for="email">E-mail</label>
+                    <input name="email" type="email" class="Input" value="" size="20"/>
+                    <br><br>
+                    <label for="nikName">NikName</label>
+                    <input name="nikName" type="text" class="Input" value="" size="17"/>
+                    <br><br>
+                    <label for="password">Password</label>
+                    <input name="password" type="password" class="Input" value="" size="17"/>
+                    <div class="img-fluid rounded" style="text-align: center">
+                        <br><br>
+                        <a href="index.html" class="btn btn-outline-secondary my-2 my-sm-0" style="background: #10707f;color: #ffffff">Crear Cuenta</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="index.html" class="btn btn-outline-secondary my-2 my-sm-0" style="background: #10707f;color: #ffffff">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </header>
     </body>
 </html>
