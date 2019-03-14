@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\controller\PacWarAPI.java
 E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\PacWarUsuario.java
 E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\PacWarMain.java
 E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\persistence\PacWarPersistence.java
+=======
+/home/2092692/PacWar/src/main/java/com/mycompany/pacwar/model/PacWarUsuario.java
+/home/2092692/PacWar/src/main/java/com/mycompany/pacwar/controller/PacWarAPI.java
+/home/2092692/PacWar/src/main/java/com/mycompany/pacwar/PacWarMain.java
+/home/2092692/PacWar/src/main/java/com/mycompany/pacwar/persistence/PacWarPersistence.java
+>>>>>>> f58ffeef5845f251802d634d1cfbd197d421e289

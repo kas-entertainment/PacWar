@@ -18,8 +18,7 @@
 
 </head>
 
-<body>
-
+<body style="background-image:url(imagenIndex.jpeg);background-size: cover">
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -40,63 +39,50 @@
     </div>
   </nav>
   <!-- Page Content -->
-  <div class="container">
-
-    <h1 class="my-4">Welcome to PacWar</h1>
-
-    
-    <!-- Features Section -->
-    <div class="row">
-      <div class="col-lg-6">
-        <h2>PacWar</h2>
-        <p>It is an alternative to the original game PAC-MAN</p>
-        <p>For this alternative we will have more than one pacman, which will compete to eat the most points and kill their opponents to win. You know who won because he is the last pac-man in the game and there are no points to eat on the board.</p>
-        <p>Each player dies the moment he is hit twice by one or more ghosts or at the moment when another player attacks him with a bomb and he does not have to defend himself.</p>
-        
-        <strong>Board elements</strong>
-        <ul>
-           <li>Player</li>
-          <li>Ghost</li>
-          <li>admin</li>
-          <li>Bomb</li>
-          <li>Shield</li>
-          <li>Fruit</li>
-          <li>Star</li>
-        </ul>
+  <header>
+      <div class="container">
+          <h1 class="my-4" style="color: #ffffff">Welcome to PacWar</h1>
+          <!-- Features Section -->
+          <div class="row" style="color: #ffffff">
+              <div class="col-lg-6">
+                  <p>It is an alternative to the original game PAC-MAN</p>
+                  <p>For this alternative we will have more than one pacman, which will compete to eat the most points and kill their opponents to win. You know who won because he is the last pac-man in the game and there are no points to eat on the board.</p>
+                  <p>Each player dies the moment he is hit twice by one or more ghosts or at the moment when another player attacks him with a bomb and he does not have to defend himself.</p>
+              </div>
+              <div class="col-lg-6">
+                  <img class="img-fluid rounded" src="imgIndex.png" alt="">
+                  <br>
+                  <br>
+                  <div class="img-fluid rounded" style="text-align: end">
+                      <a href="register.html" class="btn btn-outline-secondary my-2 my-sm-0">Register</a>
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      <a href="logIn.html" class="btn btn-outline-secondary my-2 my-sm-0">Log in</a>
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      <!--button type="button" class="btn btn-outline-secondary my-2 my-sm-0" >View Game</button-->
+                      <a href="salaJuego.html" class="btn btn-outline-secondary my-2 my-sm-0">View Game</a>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </div>
+              </div>
+          </div>
       </div>
-      <div class="col-lg-6">
-        <img class="img-fluid rounded" src="imgIndex.png" alt="">
-      </div>
-    </div>
-    <!-- /.row -->
-
-
-    <!-- Call to Action Section -->
-    <div class="row mb-4">
-      <div class="col-md-8">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
-      </div>
-      <div class="col-md-4">
-        <a class="btn btn-lg btn-secondary btn-block" href="register.html">Register</a>
-        <a class="btn btn-lg btn-secondary btn-block" href="logIn.html">Log in</a>
-      </div>
-    </div>
-
+  </header>
+  
+  <div id="login" class="container" style="visibility: hidden;margin-top: -26px">
+      <form class="col-sm-8 col-md-6" style="width: 100%;max-width: 325px;margin: auto">
+          <h3 style="color: whitesmoke"><b>Sign in PacWar</b></h3>
+          <output style="color: whitesmoke;font-weight: bold">Username</output>
+          <input id="username" class="form-control mr-sm-2" type="text" placeholder="Enter your user" required/><br>
+          <output style="color: whitesmoke;font-weight: bold">Password</output>
+          <input id="password" type="password" class="form-control" placeholder="Enter your password" required/><br>
+          <!--button type="button" class="btn btn-success my-2 my-sm-0" style="width: 100%" onClick="LoginControllerModule.doLogin($('#username').val(),$('#password').val())">Sign in</button-->
+      </form>
   </div>
-  <!-- /.container -->
 
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
-    </div>
-    <!-- /.container -->
-  </footer>
-
+  
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  
 </body>
-
 </html>
