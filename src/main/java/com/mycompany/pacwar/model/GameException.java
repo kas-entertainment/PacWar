@@ -7,8 +7,16 @@ package com.mycompany.pacwar.model;
 
 /**
  *
- * @author karen
+ * @author Sergio
  */
-public class PacWarUsuario {
+public class GameException extends Exception{
+    
+    public GameException(String message) {
+        super(message);
+    }
+
+    public GameException(String message, Throwable cause) {
+        super(message, cause);
+    }
     
 }

@@ -1,4 +1,4 @@
-com/mycompany/pacwar/model/PacWarUsuario.class
-com/mycompany/pacwar/controller/PacWarAPI.class
-com/mycompany/pacwar/persistence/PacWarPersistence.class
-com/mycompany/pacwar/PacWarMain.class
+com\mycompany\pacwar\controller\PacWarAPI.class
+com\mycompany\pacwar\model\PacWarUsuario.class
+com\mycompany\pacwar\persistence\PacWarPersistence.class
+com\mycompany\pacwar\PacWarMain.class
