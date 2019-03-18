@@ -15,7 +15,7 @@ For this alternative we will have more than one pacman, which will compete to ea
 
 Each player dies the moment he is hit twice by one or more ghosts or at the moment when another player attacks him with a bomb and he does not have to defend himself.
 
-IMAGEN
+
 
 At the moment to log in the game, then they can create a game and select a map, join a game already created, see their game statistics which would be: better score as a pacman or ghost, number of ghosts or pacman eliminated, time of longest duration and number of games won respectively.
 
