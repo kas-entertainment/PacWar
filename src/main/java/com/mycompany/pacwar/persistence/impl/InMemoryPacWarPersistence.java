@@ -13,10 +13,10 @@ import com.mycompany.pacwar.persistence.PacWarPersistence;
  * @author Andres
  */
 public class InMemoryPacWarPersistence implements PacWarPersistence{
-
+    
     @Override
     public void addPlayer(String name, String lastname, String mail, String nick, String password) throws PacWarException{
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       
     }
 
     @Override

@@ -1,11 +1,16 @@
-<<<<<<< HEAD
-com\mycompany\pacwar\controller\PacWarAPI.class
-com\mycompany\pacwar\model\PacWarUsuario.class
+com\mycompany\pacwar\persistence\impl\InMemoryPacWarPersistence.class
 com\mycompany\pacwar\persistence\PacWarPersistence.class
+com\mycompany\pacwar\model\GameException.class
+com\mycompany\pacwar\model\Shield.class
+com\mycompany\pacwar\model\Admin.class
+com\mycompany\pacwar\model\Fruit.class
+com\mycompany\pacwar\model\Ghost.class
+com\mycompany\pacwar\model\Star.class
+com\mycompany\pacwar\model\Element.class
+com\mycompany\pacwar\controller\PacWarAPI.class
+com\mycompany\pacwar\model\TeamPacman.class
+com\mycompany\pacwar\model\TeamGhost.class
 com\mycompany\pacwar\PacWarMain.class
-=======
-com/mycompany/pacwar/controller/PacWarAPI.class
-com/mycompany/pacwar/model/PacWarUsuario.class
-com/mycompany/pacwar/persistence/PacWarPersistence.class
-com/mycompany/pacwar/PacWarMain.class
->>>>>>> f58ffeef5845f251802d634d1cfbd197d421e289
+com\mycompany\pacwar\model\Bomb.class
+com\mycompany\pacwar\persistence\PacWarException.class
+com\mycompany\pacwar\model\Pacman.class
