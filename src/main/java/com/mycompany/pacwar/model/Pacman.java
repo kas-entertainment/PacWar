@@ -7,7 +7,7 @@ package com.mycompany.pacwar.model;
 
 /**
  *
- * @author Sergio
+ * @author KAS
  */
 public class Pacman {
     private int x,y;

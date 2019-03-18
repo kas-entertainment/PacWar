@@ -66,42 +66,4 @@ public class Player extends Element{
         this.password = password;
     }
     
-=======
- * @author 2112076
- */
-public class Player {
-    String Name;
-    String LastName;
-    String Mail;
-    String Nick;
-    String Password;
-
-    public String getName() {
-        return Name;
-    }
-
-    public String getLastName() {
-        return LastName;
-    }
-
-    public String getMail() {
-        return Mail;
-    }
-
-    public String getNick() {
-        return Nick;
-    }
-
-    public String getPassword() {
-        return Password;
-    }
-
-    public Player(String Name, String LastName, String Mail, String Nick, String Password) {
-        this.Name = Name;
-        this.LastName = LastName;
-        this.Mail = Mail;
-        this.Nick = Nick;
-        this.Password = Password;
-    }
->>>>>>> 1488700b950a7d06a1414d5cde36f2629674260c
 }
