@@ -15,6 +15,7 @@ import java.util.List;
  *
  * @author Andres
  */
+
 public class InMemoryPacWarPersistence implements PacWarPersistence {
 
     private final List<Player> players = new ArrayList<>();
@@ -32,6 +33,7 @@ public class InMemoryPacWarPersistence implements PacWarPersistence {
     @Override
     public void addPlayer(String name, String lastname, String mail, String nick, String password) throws PacWarException {
         players.add(new Player(name, lastname, mail, nick, password));
+
     }
 
     @Override
