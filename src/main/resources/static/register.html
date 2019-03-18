@@ -17,31 +17,42 @@ and open the template in the editor.
     <body style="background-image:url(fondoRegistro.jpg);background-size: cover">
         <h1 style="text-align: center; color: #ffffff">REGISTRO</h1>
         <br>
-        <header>
-            <div class="container" style="text-align: center">
-                <form name="register" method="POST" style="color: #ffffff" action="">
+        <!--header>
+            <div class="container" style="text-align: center"-->
+                <form name="reg" method="POST" style="color: #ffffff; text-align: center" action="perfil.html">
                     <label for="name">Name:</label>
-                    <input name="name" type="text" class="Input" value="" size="20"/>
+                    <input name="name" id="name" type="text" class="Input" value="" size="20"/>
                     <br><br>
                     <label for="lastName">LastName: </label>
-                    <input name="lastName" type="text" class="Input" value="" size="17"/>
+                    <input name="lastName" id="lastName" type="text" class="Input" value="" size="17"/>
                     <br><br>
                     <label for="email">E-mail</label>
-                    <input name="email" type="email" class="Input" value="" size="20"/>
+                    <input name="email" id="email" type="email" class="Input" value="" size="20"/>
                     <br><br>
                     <label for="nikName">NikName</label>
-                    <input name="nikName" type="text" class="Input" value="" size="17"/>
+                    <input name="nikName" id="nikName" type="text" class="Input" value="" size="17"/>
                     <br><br>
                     <label for="password">Password</label>
-                    <input name="password" type="password" class="Input" value="" size="17"/>
-                    <div class="img-fluid rounded" style="text-align: center">
-                        <br><br>
-                        <a href="index.html" class="btn btn-outline-secondary my-2 my-sm-0" style="background: #10707f;color: #ffffff">Crear Cuenta</a>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="index.html" class="btn btn-outline-secondary my-2 my-sm-0" style="background: #10707f;color: #ffffff">Cancelar</a>
-                    </div>
+                    <input name="password" id="password" type="password" class="Input" value="" size="17"/>
+                    <!--div class="img-fluid rounded" style="text-align: center"-->
+                    <br><br>
+                    <a onclick="register()" class="btn btn-outline-secondary my-2 my-sm-0" style="background: #10707f;color: #ffffff">Crear Cuenta</a>
+                    <!--a onclick="APIControllerModule.register($('#name').val, $('#lastName').val, $('#email').val, $('#nikName').val, $('#password').val)" class="btn btn-outline-secondary my-2 my-sm-0" style="background: #10707f;color: #ffffff">Crear Cuenta</a-->
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="index.html" class="btn btn-outline-secondary my-2 my-sm-0" style="background: #10707f;color: #ffffff">Cancelar</a>
+                    <!--/div-->
                 </form>
-            </div>
-        </header>
+            <!--/div>
+        </header-->
+        <script language='javaScript'>
+            function register(){
+                alert("aja");
+                
+                alert("NOMBRE: " + document.reg.name.value + "\nAPELLIDO: " + document.reg.lastName.value + "\nE-MAIL: " + document.reg.email.value + "\nNICKNAME. " + document.reg.nikName.value + "\nPASSWORD: " + document.reg.password.value);
+            }
+        </script>
+        
+        <script src='APIController.js'></script>
+        <script src='ApiRestController.js'></script>
     </body>
 </html>
