@@ -23,7 +23,7 @@ public class Team {
     }
     
     public void addPlayer(Pacman pacman) throws GameException{
-        if(pacmans.size()>20){
+        if(pacmans.size()>6){
             throw new GameException("This Team is Full");
         }
         else {
