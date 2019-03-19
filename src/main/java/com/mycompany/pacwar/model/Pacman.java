@@ -19,13 +19,16 @@ public class Pacman {
     private char direction = 'U';
     private int online = 100;
     private String nick;
-    //private Poder poder;
+    private int team;
+    private Power poder;
     
     
-    public Pacman(int x, int y, String nick){
+    public Pacman(int x, int y, String nick, int team){
         this.x=x;
         this.y = y;
         this.nick = nick; 
+        this.team = team;
+        this.poder = null;
     }
 
     public int getHealth() {
@@ -63,6 +66,50 @@ public class Pacman {
 
     public void setOnline(int online) {
         this.online = online;
+    }
+
+    public String getNick() {
+        return nick;
+    }
+
+    public void setNick(String nick) {
+        this.nick = nick;
+    }
+
+    public char getDirection() {
+        return direction;
+    }
+
+    public Power getPoder() {
+        return poder;
+    }
+
+    public void setPoder(Power poder) {
+        this.poder = poder;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public int getTeam() {
+        return team;
+    }
+
+    public void setTeam(int team) {
+        this.team = team;
     }
     
     public void move(int key){
