@@ -1,13 +1,13 @@
+/*
 var APIControllerModule = (function() {
-    var logIn= function(name, password) {
+    var logIn= function() {
         alert("Entro a LOGIN");
-        var username={
-            "name":name,
-            "password":password
-        }
+        "name":document.getElementById('NikName').value,
+        "password":document.getElementById('password').value
+        console.log(name+" "+password);
         var callback={
             onSuccess: function(){
-                
+                alert("Creado"); 
             },onFailed: function(exception){
                 console.log(exception);
                 alert("El usuario no existe"); 
@@ -42,4 +42,4 @@ var APIControllerModule = (function() {
         register:register
     };
     
-})();
+})();*/

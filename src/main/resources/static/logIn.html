@@ -25,13 +25,13 @@ and open the template in the editor.
             <label for="password">Password</label>
             <input name="password" id="password" type="password" class="Input" value="" size="17"/>
             <br><br><br>
-            <a onclick="logIn()" class="btn btn-outline-secondary my-2 my-sm-0">Log In</a>
+            <a onclick="ApiRestControllerModule.agregarUsuario()" class="btn btn-outline-secondary my-2 my-sm-0">Log In</a>
             <!--a onclick="APIControllerModule.logIn($('#nikName').val,$('#password').val)" class="btn btn-outline-secondary my-2 my-sm-0">Log In</a-->
             &nbsp;&nbsp;&nbsp;&nbsp;
             <a href="index.html" class="btn btn-outline-secondary my-2 my-sm-0">Cancelar</a>
         </form>
 
-        <script language='javaScript'>
+        <!--script language='javaScript'>
             function logIn(){
                 alert("hola");
                 if(document.log.password.value=='admin' && document.log.nikName.value=='admin'){
@@ -41,7 +41,10 @@ and open the template in the editor.
                     alert("Ingrese los datos correctos");
                 }
             }
-        </script>
-        <script src='APIController.js'></script>
+        </script-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="ApiRestController.js"></script>
     </body>
 </html>
