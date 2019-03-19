@@ -1,6 +1,10 @@
 var host = "http://localhost:8080/register/"
 
-
+var app = (function () {
+    var Palyer;
+    var AddPlayer =function(){
+        var name= $("#player").val(); 
+        
 
 async function getUser() {
     var agregar = "";
