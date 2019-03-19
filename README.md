@@ -97,6 +97,10 @@ There are different types of levels or labyrinths depending on the number of peo
 https://tree.taiga.io/project/karenmora-pacwar/timeline
 
 
+# Diagramas
+
+![Alt text](diagrama.jpeg)
+
 # Team names
 - Karen Tatiana Mora Merchán
 - Sergio Alejandro Peña Pinto
