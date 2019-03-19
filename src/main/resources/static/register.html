@@ -21,7 +21,7 @@ and open the template in the editor.
             <div class="container" style="text-align: center">
                 <form name="register" method="POST" style="color: #ffffff" action="">
                     <label for="name">Name:</label>
-                    <input name="name" type="text" class="Input" value="" size="20"/>
+                    <input name="name" type="text" class="Input" value="" size="20" id="Name"/>
                     <br><br>
                     <label for="lastName">LastName: </label>
                     <input name="lastName" type="text" class="Input" value="" size="17"/>
@@ -36,8 +36,8 @@ and open the template in the editor.
                     <input name="password" type="password" class="Input" value="" size="17"/>
                     <div class="img-fluid rounded" style="text-align: center">
                         <br><br>
-                        <a href="index.html" class="btn btn-outline-secondary my-2 my-sm-0" style="background: #10707f;color: #ffffff" onclick="addUser">Crear Cuenta</a>
-                        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+                        <a class="btn btn-outline-secondary my-2 my-sm-0" style="background: #10707f;color: #ffffff" onclick="addUser()">Crear Cuenta</a>
+ 
                         <script src="js/Users.js"></script>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="index.html" class="btn btn-outline-secondary my-2 my-sm-0" style="background: #10707f;color: #ffffff">Cancelar</a>

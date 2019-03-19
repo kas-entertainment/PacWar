@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 com\mycompany\pacwar\persistence\impl\InMemoryPacWarPersistence.class
 com\mycompany\pacwar\persistence\PacWarPersistence.class
 com\mycompany\pacwar\model\GameException.class
@@ -9,14 +8,8 @@ com\mycompany\pacwar\model\Ghost.class
 com\mycompany\pacwar\model\Star.class
 com\mycompany\pacwar\model\Element.class
 com\mycompany\pacwar\controller\PacWarAPI.class
-com\mycompany\pacwar\model\TeamPacman.class
 com\mycompany\pacwar\model\TeamGhost.class
 com\mycompany\pacwar\PacWarMain.class
 com\mycompany\pacwar\model\Bomb.class
 com\mycompany\pacwar\persistence\PacWarException.class
 com\mycompany\pacwar\model\Pacman.class
-=======
-com\mycompany\pacwar\persistence\PacWarPersistence.class
-com\mycompany\pacwar\controller\PacWarAPI.class
-com\mycompany\pacwar\PacWarMain.class
->>>>>>> 1488700b950a7d06a1414d5cde36f2629674260c
