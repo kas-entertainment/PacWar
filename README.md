@@ -91,6 +91,10 @@ There are different types of levels or labyrinths depending on the number of peo
         - number of ghosts killed.
         - number of pac-man killed.
         - global position.
+        
+# Model E-R
+
+![](src/main/resources/static/img/ModeloER.jpeg)
 
 # User stories
 
