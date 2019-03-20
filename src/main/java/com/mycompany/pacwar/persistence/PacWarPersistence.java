@@ -5,12 +5,17 @@
  */
 package com.mycompany.pacwar.persistence;
 
+import com.mycompany.pacwar.game.BattleException;
+import com.mycompany.pacwar.model.Pacman;
+import com.mycompany.pacwar.model.Player;
+import java.util.List;
+import java.util.Set;
+
 /**
  *
  * @author Andres
  */
 public interface PacWarPersistence {
     public void addPlayer(String name,String lastname,String mail,String nick,String password) throws PacWarException;
-    public void logIn(String nick,String pass) throws PacWarException;
-    public void logOut()throws PacWarException;
+    public List<Player> getPlayers();
 }

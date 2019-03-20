@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.pacwar.services;
+/*package com.mycompany.pacwar.services;
 
 import com.mycompany.pacwar.game.BattleException;
-import com.mycompany.pacwar.game.PacWar;
+import com.mycompany.pacwar.game.*;
 import com.mycompany.pacwar.game.PacWarException;
 import com.mycompany.pacwar.model.Pacman;
 import java.util.Set;
@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
  *
  * @author Sergio
  */
+/*
 @Service
 public class PacWarImplInMemory implements PacWarServices{
     
@@ -73,4 +74,4 @@ public class PacWarImplInMemory implements PacWarServices{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-}
+}*/

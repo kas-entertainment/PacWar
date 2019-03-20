@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.pacwar.services;
+/*package com.mycompany.pacwar.services;
 
 import com.mycompany.pacwar.game.*;
 import com.mycompany.pacwar.model.*;
@@ -13,7 +13,7 @@ import java.util.Set;
  *
  * @author Sergio
  */
-public interface PacWarServices {
+/*public interface PacWarServices {
     public void registerPlayerToRoom(int roomId,Pacman pacman,int team) throws BattleException;
     public void removePlayerFromRoom(int roomId,Pacman pacman,int team) throws BattleException;
     public Set<Pacman> getRegisteredPlayers(int roomId) throws BattleException;
@@ -25,4 +25,4 @@ public interface PacWarServices {
     public Pacman getPlayer(int roomId, String username) throws BattleException;
     public Set<Integer> getRooms();
     
-}
+}*/

@@ -31,27 +31,12 @@ public class InMemoryPacWarPersistence implements PacWarPersistence {
     }
 
     @Override
+    public List<Player> getPlayers() {
+        return players;
+    }
+
+    @Override
     public void addPlayer(String name, String lastname, String mail, String nick, String password) throws PacWarException {
         players.add(new Player(name, lastname, mail, nick, password));
-
     }
-
-    @Override
-    public void logIn(String nick, String pass) throws PacWarException {
-        for (Player p : players) {
-
-            if (nick.equals(p.getNick()) & pass.equals(p.getPassword())) {
-
-            } else{
-                throw new PacWarException("The user or password is incorrect.");
-            }
-
-        }
-    }
-
-    @Override
-    public void logOut() throws PacWarException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
 }
