@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 com/mycompany/pacwar/persistence/Jugador.class
 com/mycompany/pacwar/persistence/PacWarPersistence.class
 com/mycompany/pacwar/model/Bomb.class
@@ -16,3 +17,20 @@ com/mycompany/pacwar/services/pacWarServices.class
 com/mycompany/pacwar/model/GameException.class
 com/mycompany/pacwar/PacWarMain.class
 com/mycompany/pacwar/model/Ghost.class
+=======
+com\mycompany\pacwar\persistence\impl\InMemoryPacWarPersistence.class
+com\mycompany\pacwar\persistence\PacWarPersistence.class
+com\mycompany\pacwar\model\GameException.class
+com\mycompany\pacwar\model\Shield.class
+com\mycompany\pacwar\model\Admin.class
+com\mycompany\pacwar\model\Fruit.class
+com\mycompany\pacwar\model\Ghost.class
+com\mycompany\pacwar\model\Star.class
+com\mycompany\pacwar\model\Element.class
+com\mycompany\pacwar\controller\PacWarAPI.class
+com\mycompany\pacwar\model\TeamGhost.class
+com\mycompany\pacwar\PacWarMain.class
+com\mycompany\pacwar\model\Bomb.class
+com\mycompany\pacwar\persistence\PacWarException.class
+com\mycompany\pacwar\model\Pacman.class
+>>>>>>> ba819d4d8cc0155e0a0dc3d23f7cafe1f9324033

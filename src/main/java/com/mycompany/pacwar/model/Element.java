@@ -11,16 +11,9 @@ package com.mycompany.pacwar.model;
  */
 public class Element {
     
-    protected int idItem;
+    protected int id;
     protected int x,y;
-
-    public int getIdItem() {
-        return idItem;
-    }
-
-    public void setIdItem(int idItem) {
-        this.idItem = idItem;
-    }
+    protected int tamX,tamY;
 
     public int getX() {
         return x;
@@ -36,6 +29,30 @@ public class Element {
 
     public void setY(int y) {
         this.y = y;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getTamX() {
+        return tamX;
+    }
+
+    public void setTamX(int tamX) {
+        this.tamX = tamX;
+    }
+
+    public int getTamY() {
+        return tamY;
+    }
+
+    public void setTamY(int tamY) {
+        this.tamY = tamY;
     }
     
     

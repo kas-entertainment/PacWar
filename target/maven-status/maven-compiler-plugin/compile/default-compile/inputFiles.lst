@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /home/karen/Escritorio/arswProyecto/PacWar/src/main/java/com/mycompany/pacwar/persistence/PacWarPersistence.java
 /home/karen/Escritorio/arswProyecto/PacWar/src/main/java/com/mycompany/pacwar/services/pacWarServices.java
 /home/karen/Escritorio/arswProyecto/PacWar/src/main/java/com/mycompany/pacwar/persistence/Jugador.java
@@ -16,3 +17,21 @@
 /home/karen/Escritorio/arswProyecto/PacWar/src/main/java/com/mycompany/pacwar/persistence/impl/InMemoryPacWarPersistence.java
 /home/karen/Escritorio/arswProyecto/PacWar/src/main/java/com/mycompany/pacwar/model/Shield.java
 /home/karen/Escritorio/arswProyecto/PacWar/src/main/java/com/mycompany/pacwar/model/TeamGhost.java
+=======
+C:\Users\Andres\Documents\universidad\arsw\pacwar\PacWar\src\main\java\com\mycompany\pacwar\persistence\PacWarPersistence.java
+C:\Users\Andres\Documents\universidad\arsw\pacwar\PacWar\src\main\java\com\mycompany\pacwar\model\Star.java
+C:\Users\Andres\Documents\universidad\arsw\pacwar\PacWar\src\main\java\com\mycompany\pacwar\model\Shield.java
+C:\Users\Andres\Documents\universidad\arsw\pacwar\PacWar\src\main\java\com\mycompany\pacwar\PacWarMain.java
+C:\Users\Andres\Documents\universidad\arsw\pacwar\PacWar\src\main\java\com\mycompany\pacwar\model\Bomb.java
+C:\Users\Andres\Documents\universidad\arsw\pacwar\PacWar\src\main\java\com\mycompany\pacwar\model\Player.java
+C:\Users\Andres\Documents\universidad\arsw\pacwar\PacWar\src\main\java\com\mycompany\pacwar\persistence\impl\InMemoryPacWarPersistence.java
+C:\Users\Andres\Documents\universidad\arsw\pacwar\PacWar\src\main\java\com\mycompany\pacwar\persistence\PacWarException.java
+C:\Users\Andres\Documents\universidad\arsw\pacwar\PacWar\src\main\java\com\mycompany\pacwar\model\Ghost.java
+C:\Users\Andres\Documents\universidad\arsw\pacwar\PacWar\src\main\java\com\mycompany\pacwar\controller\PacWarAPI.java
+C:\Users\Andres\Documents\universidad\arsw\pacwar\PacWar\src\main\java\com\mycompany\pacwar\model\GameException.java
+C:\Users\Andres\Documents\universidad\arsw\pacwar\PacWar\src\main\java\com\mycompany\pacwar\model\Admin.java
+C:\Users\Andres\Documents\universidad\arsw\pacwar\PacWar\src\main\java\com\mycompany\pacwar\model\Pacman.java
+C:\Users\Andres\Documents\universidad\arsw\pacwar\PacWar\src\main\java\com\mycompany\pacwar\model\Fruit.java
+C:\Users\Andres\Documents\universidad\arsw\pacwar\PacWar\src\main\java\com\mycompany\pacwar\model\TeamGhost.java
+C:\Users\Andres\Documents\universidad\arsw\pacwar\PacWar\src\main\java\com\mycompany\pacwar\model\Element.java
+>>>>>>> ba819d4d8cc0155e0a0dc3d23f7cafe1f9324033

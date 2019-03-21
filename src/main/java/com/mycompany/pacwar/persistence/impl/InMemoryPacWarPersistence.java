@@ -5,6 +5,7 @@
  */
 package com.mycompany.pacwar.persistence.impl;
 
+<<<<<<< HEAD
 import com.mycompany.pacwar.persistence.Jugador;
 import com.mycompany.pacwar.persistence.PacWarException;
 import com.mycompany.pacwar.persistence.PacWarPersistence;
@@ -14,11 +15,19 @@ import java.util.List;
 import java.util.Map;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+=======
+import com.mycompany.pacwar.model.Player;
+import com.mycompany.pacwar.persistence.PacWarException;
+import com.mycompany.pacwar.persistence.PacWarPersistence;
+import java.util.ArrayList;
+import java.util.List;
+>>>>>>> ba819d4d8cc0155e0a0dc3d23f7cafe1f9324033
 
 /**
- * 
+ *
  * @author Andres
  */
+<<<<<<< HEAD
 @Service
 public class InMemoryPacWarPersistence implements PacWarPersistence{
     
@@ -73,11 +82,45 @@ public class InMemoryPacWarPersistence implements PacWarPersistence{
     @Override
     public List<Jugador> getAllGamers() {
         return new ArrayList<Jugador>(jugadores.values());
+=======
+
+public class InMemoryPacWarPersistence implements PacWarPersistence {
+
+    private final List<Player> players = new ArrayList<>();
+
+    public InMemoryPacWarPersistence() {
+        //load data
+        Player karen = new Player("Karen", "Mora", "karen.mora@mail.escuelaing.edu.co", "Karen20", "karen123");
+        Player sergio = new Player("Sergio", "Pena", "sergio.pena@mail.escuelaing.edu.co", "checho98", "sergio123");
+        Player andres = new Player("Andres", "Rodriguez", "andres.rodriguez-de@mail.escuelaing.edu.co", "dokgo boy", "andres123");
+        players.add(karen);
+        players.add(sergio);
+        players.add(andres);
+    }
+
+    @Override
+    public void addPlayer(String name, String lastname, String mail, String nick, String password) throws PacWarException {
+        players.add(new Player(name, lastname, mail, nick, password));
+
+    }
+
+    @Override
+    public void logIn(String nick, String pass) throws PacWarException {
+        for (Player p : players) {
+
+            if (nick.equals(p.getNick()) & pass.equals(p.getPassword())) {
+
+            } else{
+                throw new PacWarException("The user or password is incorrect.");
+            }
+
+        }
+>>>>>>> ba819d4d8cc0155e0a0dc3d23f7cafe1f9324033
     }
 
     @Override
     public List<Jugador> getGamersSameSesion(String idSala) {
         return new ArrayList<Jugador>(jugadores.values());
     }
-    
+
 }
