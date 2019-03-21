@@ -5,7 +5,8 @@
  */
 package com.mycompany.pacwar.persistence.impl;
 
-<<<<<<< HEAD
+import com.mycompany.pacwar.game.BattleException;
+import com.mycompany.pacwar.model.Pacman;
 import com.mycompany.pacwar.persistence.Jugador;
 import com.mycompany.pacwar.persistence.PacWarException;
 import com.mycompany.pacwar.persistence.PacWarPersistence;
@@ -13,21 +14,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-=======
-import com.mycompany.pacwar.model.Player;
-import com.mycompany.pacwar.persistence.PacWarException;
-import com.mycompany.pacwar.persistence.PacWarPersistence;
-import java.util.ArrayList;
-import java.util.List;
->>>>>>> ba819d4d8cc0155e0a0dc3d23f7cafe1f9324033
 
 /**
- *
+ * 
  * @author Andres
  */
-<<<<<<< HEAD
 @Service
 public class InMemoryPacWarPersistence implements PacWarPersistence{
     
@@ -82,40 +76,6 @@ public class InMemoryPacWarPersistence implements PacWarPersistence{
     @Override
     public List<Jugador> getAllGamers() {
         return new ArrayList<Jugador>(jugadores.values());
-=======
-
-public class InMemoryPacWarPersistence implements PacWarPersistence {
-
-    private final List<Player> players = new ArrayList<>();
-
-    public InMemoryPacWarPersistence() {
-        //load data
-        Player karen = new Player("Karen", "Mora", "karen.mora@mail.escuelaing.edu.co", "Karen20", "karen123");
-        Player sergio = new Player("Sergio", "Pena", "sergio.pena@mail.escuelaing.edu.co", "checho98", "sergio123");
-        Player andres = new Player("Andres", "Rodriguez", "andres.rodriguez-de@mail.escuelaing.edu.co", "dokgo boy", "andres123");
-        players.add(karen);
-        players.add(sergio);
-        players.add(andres);
-    }
-
-    @Override
-    public void addPlayer(String name, String lastname, String mail, String nick, String password) throws PacWarException {
-        players.add(new Player(name, lastname, mail, nick, password));
-
-    }
-
-    @Override
-    public void logIn(String nick, String pass) throws PacWarException {
-        for (Player p : players) {
-
-            if (nick.equals(p.getNick()) & pass.equals(p.getPassword())) {
-
-            } else{
-                throw new PacWarException("The user or password is incorrect.");
-            }
-
-        }
->>>>>>> ba819d4d8cc0155e0a0dc3d23f7cafe1f9324033
     }
 
     @Override
@@ -123,4 +83,54 @@ public class InMemoryPacWarPersistence implements PacWarPersistence {
         return new ArrayList<Jugador>(jugadores.values());
     }
 
+    @Override
+    public void registerPlayerToRoom(int roomId, Pacman pacman, int team) throws BattleException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void removePlayerFromRoom(int roomId, Pacman pacman, int team) throws BattleException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Set<Pacman> getRegisteredPlayers(int roomId) throws BattleException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void createRoom(int roomId) throws BattleException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void removeRoom(int roomId) throws BattleException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int getTotalRooms() throws BattleException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void movePacman(int roomId, String username, int key, int team) throws com.mycompany.pacwar.game.PacWarException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void playerOnline(int roomId, String username) throws BattleException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pacman getPlayer(int roomId, String username) throws BattleException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Set<Integer> getRooms() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
 }

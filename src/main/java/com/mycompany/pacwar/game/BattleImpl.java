@@ -5,7 +5,7 @@
  */
 package com.mycompany.pacwar.game;
 
-import com.mycompany.pacwar.controller.PacWarController;
+import com.mycompany.pacwar.controller.PacWarAPIController;
 import com.mycompany.pacwar.model.*;
 import java.util.*;
 
@@ -20,7 +20,7 @@ public class BattleImpl extends Thread implements Battle{
     private HashMap<Integer,Team> teamsmap= new HashMap<Integer, Team>();
     private  int id;
     private final int numberOfTeams= 2;
-    PacWarController pwc;
+    PacWarAPIController pwc;
     private boolean active=true;
 
     @Override

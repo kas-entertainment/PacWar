@@ -5,8 +5,11 @@
  */
 package com.mycompany.pacwar.persistence;
 
+import com.mycompany.pacwar.game.BattleException;
+import com.mycompany.pacwar.model.Pacman;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 /**
  *
@@ -22,5 +25,15 @@ public interface PacWarPersistence {
 
     public List<Jugador> getGamersSameSesion(String idSala);
     
+    public void registerPlayerToRoom(int roomId,Pacman pacman,int team) throws BattleException;
+    public void removePlayerFromRoom(int roomId,Pacman pacman,int team) throws BattleException;
+    public Set<Pacman> getRegisteredPlayers(int roomId) throws BattleException;
+    public void createRoom(int roomId) throws BattleException;
+    public void removeRoom(int roomId) throws BattleException;
+    public int getTotalRooms() throws BattleException;
+    public void movePacman(int roomId, String username, int key,int team) throws com.mycompany.pacwar.game.PacWarException ;
+    public void playerOnline(int roomId, String username)throws BattleException;
+    public Pacman getPlayer(int roomId, String username) throws BattleException;
+    public Set<Integer> getRooms();
 
 }
