@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.pacwar.services;
+package com.mycompany.pacwar.persistence;
 
 import java.util.ArrayList;
 
@@ -19,13 +19,15 @@ public class Jugador {
     private int puntos;
     private ArrayList poderes;
     private String idSala;
-    
-    public Jugador(String name, String lastName, String email, String nikName, int puntos){
+
+    public Jugador(String name, String lastName, String nikName, String email, String idSala, int puntos, ArrayList poderes) {
         this.name=name;
         this.lastName=lastName;
-        this.email=email;
         this.nikName=nikName;
+        this.email=email;
+        this.idSala=idSala;
         this.puntos=puntos;
+        this.poderes=poderes;
     }
     
     

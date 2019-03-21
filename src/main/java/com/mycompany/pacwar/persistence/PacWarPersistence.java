@@ -5,12 +5,22 @@
  */
 package com.mycompany.pacwar.persistence;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Andres
  */
 public interface PacWarPersistence {
-    public void addPlayer(String name,String lastname,String mail,String nick,String password) throws PacWarException;
-    public void logIn(String nick,String pass) throws PacWarException;
-    public void logOut()throws PacWarException;
+    
+    public void addPlayer(String name, String lastName, String nikName, String email, String idSala, int puntos, ArrayList poderes);
+
+    public Jugador getJugadorByName(String nikName);
+
+    public List<Jugador> getAllGamers();
+
+    public List<Jugador> getGamersSameSesion(String idSala);
+    
+
 }

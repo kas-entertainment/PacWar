@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -14,7 +14,7 @@ and open the template in the editor.
         <!-- Custom styles for this template -->
         <link href="css/modern-business.css" rel="stylesheet">
     </head>
-    <body style="background-image:url(fondoRegistro.jpg);background-size: cover">
+    <body style="background-image:url(/img/fondoRegistro.jpg);background-size: cover">
         <h1 style="text-align: center; color: #ffffff">REGISTRO</h1>
         <br>
         <!--header>
@@ -34,25 +34,15 @@ and open the template in the editor.
                     <br><br>
                     <label for="password">Password</label>
                     <input name="password" id="password" type="password" class="Input" value="" size="17"/>
-                    <!--div class="img-fluid rounded" style="text-align: center"-->
                     <br><br>
-                    <a onclick="register()" class="btn btn-outline-secondary my-2 my-sm-0" style="background: #10707f;color: #ffffff">Crear Cuenta</a>
-                    <!--a onclick="APIControllerModule.register($('#name').val, $('#lastName').val, $('#email').val, $('#nikName').val, $('#password').val)" class="btn btn-outline-secondary my-2 my-sm-0" style="background: #10707f;color: #ffffff">Crear Cuenta</a-->
+                    <a onclick="ApiRestControllerModule.agregarUsuario()" class="btn btn-outline-secondary my-2 my-sm-0" style="background: #10707f;color: #ffffff">Crear Cuenta</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="index.html" class="btn btn-outline-secondary my-2 my-sm-0" style="background: #10707f;color: #ffffff">Cancelar</a>
-                    <!--/div-->
                 </form>
-            <!--/div>
-        </header-->
-        <script language='javaScript'>
-            function register(){
-                alert("aja");
-                
-                alert("NOMBRE: " + document.reg.name.value + "\nAPELLIDO: " + document.reg.lastName.value + "\nE-MAIL: " + document.reg.email.value + "\nNICKNAME. " + document.reg.nikName.value + "\nPASSWORD: " + document.reg.password.value);
-            }
-        </script>
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="ApiRestController.js"></script>
         
-        <script src='APIController.js'></script>
-        <script src='ApiRestController.js'></script>
     </body>
 </html>

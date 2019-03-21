@@ -7,12 +7,14 @@ package com.mycompany.pacwar;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 /**
  *
  * @author karen
  */
 
 @SpringBootApplication
+@ComponentScan
 public class PacWarMain {
 
 	public static void main(String[] args) {
