@@ -2,27 +2,23 @@ var ApiRestControllerModule = (function () {
 
 
     iniciarSesion = function () {
-        axios.post('/login',
-        {name: document.getElementById('nikName').value,
+        axios.get('http://localhost:8080/pacwar/login', 
+        { params: {name: document.getElementById('nikName').value,
         password: document.getElementById('password').value
-        })
+        }})
         .then(function(res) {
-            if(res.status==200) {
-                mensaje.innerHTML = res.data;
-            }
             console.log(res);
         })
         .catch(function(err) {
-            mensaje.innerText = 'Error de conexión ' + err;
+            console.log(err);
+        }).then(function(){
+            
         })
-        .then(function() {
-            loading.style.display = 'none';
-        });
     };
 
     
     
-    agregarUsuario = function () {axios.post('http://localhost:8080/register.html', {
+    agregarUsuario = function () {axios.post('http://localhost:8080/pacwar/register', {
             name: document.getElementById('name').value,
             lastName: document.getElementById('lastName').value,
             email: document.getElementById('email').value,

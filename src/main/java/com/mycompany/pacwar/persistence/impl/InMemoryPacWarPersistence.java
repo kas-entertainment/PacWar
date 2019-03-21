@@ -33,38 +33,32 @@ public class InMemoryPacWarPersistence implements PacWarPersistence{
         String lastName="mora";
         String nikName="moris";
         String email="karen.mora@mai.escuelaing.edu.co";
-        String idSala="101";
-        int puntos=0;
-        ArrayList poderes=null;
-        Jugador gamer = new Jugador(name, lastName, nikName, email, idSala, puntos, poderes);
+        String password="12345";
+        Jugador gamer = new Jugador(name, lastName, nikName, email, password);
         jugadores.put(nikName, gamer);
         
         String nameB="andres";
         String lastNameB="pkas";
         String nikNameB="andrew";
         String emailB="andres.mora@mai.escuelaing.edu.co";
-        String idSalaB="101";
-        int puntosB=0;
-        ArrayList poderesB=null;
-        Jugador gamerB= new Jugador(nameB, lastNameB, nikNameB, emailB, idSalaB, puntosB, poderesB);
+        String passwordB="12345";
+        Jugador gamerB= new Jugador(nameB, lastNameB, nikNameB, emailB, passwordB);
         jugadores.put(nikNameB, gamerB);
         
         String nameC="sergio";
         String lastNameC="peña";
         String nikNameC="chechomon";
         String emailC="sergio.pena@mai.escuelaing.edu.co";
-        String idSalaC="101";
-        int puntosC=0;
-        ArrayList poderesC=null;
-        Jugador gamerC = new Jugador(nameC, lastNameC, nikNameC, emailC, idSalaC, puntosC, poderesC);
+        String passwordC="12345";
+        Jugador gamerC = new Jugador(nameC, lastNameC, nikNameC, emailC, passwordC);
         jugadores.put(nikNameC, gamerC);
         
     }
 
     @Override
-    public void addPlayer(String name, String lastName, String nikName, String email, String idSala, int puntos, ArrayList poderes) {
+    public void addPlayer(String name, String lastName, String nikName, String email, String password) {
         Jugador jugador=null;
-        jugador=new Jugador(name, lastName, nikName,email, idSala, puntos,poderes);
+        jugador=new Jugador(name, lastName, nikName,email,password);
         jugadores.put(nikName, jugador);
     }
 
@@ -132,5 +126,15 @@ public class InMemoryPacWarPersistence implements PacWarPersistence{
     public Set<Integer> getRooms() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
+    @Override
+    public void logIn(String nickname, String password) {
+        boolean temp=false;
+        for(int i=0; i<jugadores.size();i++){
+            if(jugadores.get(i).getNikName().equals(nickname)){
+                temp=true;
+                break;
+            }
+        }
+    }
 }

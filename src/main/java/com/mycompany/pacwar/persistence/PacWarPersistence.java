@@ -17,7 +17,7 @@ import java.util.Set;
  */
 public interface PacWarPersistence {
     
-    public void addPlayer(String name, String lastName, String nikName, String email, String idSala, int puntos, ArrayList poderes);
+    public void addPlayer(String name, String lastName, String nikName, String email, String password);
 
     public Jugador getJugadorByName(String nikName);
 
@@ -35,5 +35,7 @@ public interface PacWarPersistence {
     public void playerOnline(int roomId, String username)throws BattleException;
     public Pacman getPlayer(int roomId, String username) throws BattleException;
     public Set<Integer> getRooms();
+
+    public void logIn(String nickname, String password);
 
 }

@@ -22,8 +22,8 @@ public class pacWarServices {
     @Autowired
     PacWarPersistence pacwarPersistence;
     
-    public void addPlayer(String name, String lastName, String nikName, String email, String idSala, int puntos, ArrayList poderes){
-        pacwarPersistence.addPlayer(name, lastName, nikName, email, idSala, puntos, poderes);
+    public void addPlayer(String name, String lastName, String nikName, String email, String password){
+        pacwarPersistence.addPlayer(name, lastName, nikName, email,password);
     }
     public Jugador getJugadorByName(String nikName){
         return pacwarPersistence.getJugadorByName(nikName);
@@ -35,5 +35,9 @@ public class pacWarServices {
     
     public List<Jugador> getGamersSameSesion(String idSala){
         return pacwarPersistence.getGamersSameSesion(idSala);
+    }
+
+    public void logIn(String nickname, String password) {
+        pacwarPersistence.logIn(nickname,password);
     }
 }
