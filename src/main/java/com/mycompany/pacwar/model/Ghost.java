@@ -9,20 +9,14 @@ package com.mycompany.pacwar.model;
  *
  * @author Sergio
  */
-public class Ghost {
+public class Ghost extends Movable{
     
     private int id;
     private int x,y;
     private String username;
 
-    public Ghost(int id) {
-        this.id=id;
-    }
-    
-    public Ghost(int id, int x, int y) {
-        this.id = id;
-        this.x = x;
-        this.y = y;
+    public Ghost(int new_x, int new_y) {
+        super(new_x, new_y);
     }
 
     public int getId() {

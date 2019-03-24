@@ -7,10 +7,9 @@ package com.mycompany.pacwar.model;
 
 /**
  *
-<<<<<<< HEAD
  * @author 2110461
  */
-public class Player extends Element{
+public class Player {
     
     protected String name;
     protected String lastname;
