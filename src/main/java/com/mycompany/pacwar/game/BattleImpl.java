@@ -5,6 +5,7 @@
  */
 package com.mycompany.pacwar.game;
 
+import com.mycompany.pacwar.model.actors.Pacman;
 import com.mycompany.pacwar.controller.PacWarAPIController;
 import com.mycompany.pacwar.model.*;
 import java.util.*;
@@ -17,7 +18,6 @@ public class BattleImpl extends Thread implements Battle{
     
     private ArrayList<Food> comida;
     private ArrayList<Power> poderes = new ArrayList<Power>();
-    private HashMap<Integer,Team> teamsmap= new HashMap<Integer, Team>();
     private  int id;
     private final int numberOfTeams= 2;
     PacWarAPIController pwc;
@@ -30,11 +30,6 @@ public class BattleImpl extends Thread implements Battle{
 
     @Override
     public void removePlayerToTeam(Pacman pacman, int team) throws BattleException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public Team getTeam(int id) throws BattleException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

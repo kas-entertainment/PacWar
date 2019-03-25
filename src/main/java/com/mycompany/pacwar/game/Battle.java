@@ -5,6 +5,7 @@
  */
 package com.mycompany.pacwar.game;
 
+import com.mycompany.pacwar.model.actors.Pacman;
 import com.mycompany.pacwar.model.*;
 import java.util.ArrayList;
 
@@ -15,7 +16,6 @@ import java.util.ArrayList;
 public interface Battle {
     void insertPlayerToTeam(Pacman pacman, int team) throws BattleException;
     void removePlayerToTeam(Pacman pacman, int team) throws BattleException;
-    Team getTeam(int id) throws BattleException;
     ArrayList<Pacman> getAllPacmans();
     int findPacmanTeam(Pacman pacman)throws BattleException;
     Pacman getPacman(String username) throws BattleException;

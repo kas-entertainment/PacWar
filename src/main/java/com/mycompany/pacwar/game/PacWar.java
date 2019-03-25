@@ -5,7 +5,7 @@
  */
 package com.mycompany.pacwar.game;
 
-import com.mycompany.pacwar.model.Pacman;
+import com.mycompany.pacwar.model.actors.Pacman;
 import java.util.HashMap;
 
 /**
