@@ -100,7 +100,7 @@ There are different types of levels or labyrinths depending on the number of peo
 https://tree.taiga.io/project/karenmora-pacwar/timeline
 
 
-# Diagramas
+# Class Diagram
 
 ![Alt text](diagrama.jpeg)
 
