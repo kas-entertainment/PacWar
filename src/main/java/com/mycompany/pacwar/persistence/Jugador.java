@@ -5,35 +5,34 @@
  */
 package com.mycompany.pacwar.persistence;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author karen
  */
-public class Jugador {
+public class Jugador implements Serializable{
     private String name;
     private String lastName;
     private String email;
     private String nikName;
-    private int puntos;
-    private ArrayList poderes;
-    private String idSala;
+    private String password;
+    
+    public Jugador(){}
 
-    public Jugador(String name, String lastName, String nikName, String email, String idSala, int puntos, ArrayList poderes) {
+    public Jugador(String name, String lastName, String nikName, String email, String password) {
         this.name=name;
         this.lastName=lastName;
         this.nikName=nikName;
         this.email=email;
-        this.idSala=idSala;
-        this.puntos=puntos;
-        this.poderes=poderes;
+        this.password=password;
     }
     
     
     
-    public String getIdSala(){
-        return idSala;
+    public String getPassword(){
+        return password;
     }
 
     public String getName() {
@@ -51,15 +50,7 @@ public class Jugador {
     public String getNikName() {
         return nikName;
     }
-
-    public int getPuntos() {
-        return puntos;
-    }
-
-    public ArrayList getPoderes() {
-        return poderes;
-    }
-
+    
     public void setName(String name) {
         this.name = name;
     }
@@ -75,16 +66,8 @@ public class Jugador {
     public void setNikName(String nikName) {
         this.nikName = nikName;
     }
-
-    public void setPuntos(int puntos) {
-        this.puntos = puntos;
-    }
-
-    public void setPoderes(ArrayList poderes) {
-        this.poderes = poderes;
-    }
-
-    public void setIdSala(String idSala) {
-        this.idSala = idSala;
+    
+    public void setIdSala(String password) {
+        this.password = password;
     }
 }

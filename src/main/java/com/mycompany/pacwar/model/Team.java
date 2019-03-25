@@ -12,45 +12,45 @@ import java.util.concurrent.ConcurrentHashMap;
  *
  * @author Sergio
  */
-public class TeamGhost {
+public class Team {
     private int Score;
     private int number;
-    private ConcurrentHashMap<String,Ghost> ghosts = new ConcurrentHashMap<>();
+    private ConcurrentHashMap<String,Pacman> pacmans = new ConcurrentHashMap<>();
 
-    public TeamGhost(int number) {
+    public Team(int number) {
         Score = 0;
         this.number = number;
     }
     
-    public void addPacman(Ghost ghost) throws GameException{
-        if(ghosts.size()>20){
+    public void addPlayer(Pacman pacman) throws GameException{
+        if(pacmans.size()>6){
             throw new GameException("This Team is Full");
         }
         else {
-            ghosts.put(ghost.getUsername(), ghost);
+            pacmans.put(pacman.getNick(), pacman);
         }
     }
     
-    public void removeGhost(String username) throws GameException{
-        if(!ghosts.containsKey(username)){
+    public void removePlayer(String username) throws GameException{
+        if(!pacmans.containsKey(username)){
             throw new GameException("This team does not contain this player");
         }
         else {
-            ghosts.remove(username);
+            pacmans.remove(username);
         }
     }
     
-    public Ghost getGhost(String username)throws GameException{
-        if(!ghosts.containsKey(username)){
+    public Pacman getPacman(String username)throws GameException{
+        if(!pacmans.containsKey(username)){
             throw new GameException("That pacman does not exist");
         }
         else{
-            return ghosts.get(username);
+            return pacmans.get(username);
         }
     }
     
     public boolean isInTeam(String username){
-        if(ghosts.containsKey(username)){
+        if(pacmans.containsKey(username)){
             return true;
         }
         else{
@@ -74,8 +74,8 @@ public class TeamGhost {
         this.number = number;
     }
 
-    public ArrayList<Ghost> getGhosts() {
-        return new ArrayList<Ghost>(ghosts.values());
+    public ArrayList<Pacman> getGhosts() {
+        return new ArrayList<Pacman>(pacmans.values());
     }
     
 }

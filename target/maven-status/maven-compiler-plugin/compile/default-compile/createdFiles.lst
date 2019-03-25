@@ -4,9 +4,7 @@ com/mycompany/pacwar/model/Bomb.class
 com/mycompany/pacwar/model/Shield.class
 com/mycompany/pacwar/persistence/PacWarException.class
 com/mycompany/pacwar/model/Admin.class
-com/mycompany/pacwar/model/TeamGhost.class
 com/mycompany/pacwar/model/Fruit.class
-com/mycompany/pacwar/model/TeamPacman.class
 com/mycompany/pacwar/persistence/impl/InMemoryPacWarPersistence.class
 com/mycompany/pacwar/model/Element.class
 com/mycompany/pacwar/controller/PacWarAPIController.class

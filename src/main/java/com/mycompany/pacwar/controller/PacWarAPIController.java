@@ -10,6 +10,7 @@ import com.mycompany.pacwar.services.pacWarServices;
 import java.util.logging.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
@@ -34,10 +35,21 @@ public class PacWarAPIController {
     private pacWarServices pacwarServices;
     
     //POST
-    @RequestMapping(method = RequestMethod.POST, value ="/registrar")
+    @RequestMapping(method = RequestMethod.POST, value ="/register", consumes = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<?> crearJugador(@RequestBody Jugador jugador){
         try{
-            pacwarServices.addPlayer(jugador.getName(),jugador.getLastName(),jugador.getNikName(),jugador.getEmail(),jugador.getIdSala(),jugador.getPuntos(),jugador.getPoderes());
+            pacwarServices.addPlayer(jugador.getName(),jugador.getLastName(),jugador.getNikName(),jugador.getEmail(),jugador.getPassword());
+            return new ResponseEntity<>("Creado Correctamente",HttpStatus.ACCEPTED);
+        }catch(Exception ex){
+            Logger.getLogger(PacWarAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>(ex.getMessage(),HttpStatus.BAD_REQUEST);
+        }
+    }
+    
+    @RequestMapping(method = RequestMethod.GET, value ="/login")
+    public ResponseEntity<?> logIn(@PathVariable String nickname, @PathVariable String password){
+        try{
+            pacwarServices.logIn(nickname,password);
             return new ResponseEntity<>("Creado Correctamente",HttpStatus.ACCEPTED);
         }catch(Exception ex){
             Logger.getLogger(PacWarAPIController.class.getName()).log(Level.SEVERE, null, ex);
