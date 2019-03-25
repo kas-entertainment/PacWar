@@ -94,7 +94,6 @@ There are different types of levels or labyrinths depending on the number of peo
         
 # Model E-R
 
-![](src/main/resources/static/img/ModeloER.jpeg)
 
 # User stories
 
