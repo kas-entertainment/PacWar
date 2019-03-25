@@ -11,7 +11,7 @@ public class Dot extends Pickable {
 
     public Dot(int posx, int posy) {
         super(posx, posy);
-        ImageIcon ii = new ImageIcon("../resources/static/img/pickups/dot.png");
+        ImageIcon ii = new ImageIcon("src/main/resources/static/img/pickups/dot.png");
         image = ii.getImage();
         points = 10;
         type = "Dot";

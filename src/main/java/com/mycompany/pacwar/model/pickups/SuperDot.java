@@ -11,7 +11,7 @@ public class SuperDot extends Pickable {
 
     public SuperDot(int x, int y) {
         super(x, y);
-        ImageIcon ii = new ImageIcon("../resources/static/img/pickups/bigdot.png");
+        ImageIcon ii = new ImageIcon("src/main/resources/static/img/pickups/bigdot.png");
         image = ii.getImage();
         points = 10;
         type = "SuperDot";
