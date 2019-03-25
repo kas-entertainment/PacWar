@@ -6,7 +6,7 @@
 package com.mycompany.pacwar.persistence.impl;
 
 import com.mycompany.pacwar.game.BattleException;
-import com.mycompany.pacwar.model.Pacman;
+import com.mycompany.pacwar.model.actors.Pacman;
 import com.mycompany.pacwar.persistence.Jugador;
 import com.mycompany.pacwar.persistence.PacWarException;
 import com.mycompany.pacwar.persistence.PacWarPersistence;

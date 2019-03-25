@@ -6,7 +6,7 @@
 package com.mycompany.pacwar.persistence;
 
 import com.mycompany.pacwar.game.BattleException;
-import com.mycompany.pacwar.model.Pacman;
+import com.mycompany.pacwar.model.actors.Pacman;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
