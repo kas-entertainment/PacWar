@@ -27,11 +27,12 @@ and open the template in the editor.
             <br><br><br>
             <a onclick="logIn()" class="btn btn-outline-secondary my-2 my-sm-0">Log In</a>
             <!--a onclick="ApiRestControllerModule.iniciarSesion()" class="btn btn-outline-secondary my-2 my-sm-0">Log In</a-->
+            <!--button name="button" onclick="app.getCinemaByName($('#nikName').val(),$('#password').val())">Buscar</button-->
             &nbsp;&nbsp;&nbsp;&nbsp;
             <a href="index.html" class="btn btn-outline-secondary my-2 my-sm-0">Cancelar</a>
         </form>
         </div>
-
+        
         <script language='javaScript'>
             function logIn(){
                 if(document.log.password.value=='admin' && document.log.nikName.value=='admin'){
@@ -42,9 +43,10 @@ and open the template in the editor.
                 }
             }
         </script>
+        
         <script src="vendor/jquery/jquery.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src="ApiRestController.js"></script>
+        <script src="ApiRestController.js"></script>               
     </body>
 </html>
