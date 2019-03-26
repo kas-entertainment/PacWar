@@ -129,12 +129,19 @@ Have an application as competent as possible in the market, be the best in the i
 
 https://tree.taiga.io/project/karenmora-pacwar/timeline
 
+# Instalation 
+
+This application needs installed:
+
+* Java
+* Tomcat
+* Spring
 
 # Class Diagram
 
 ![Alt text](diagrama.jpeg)
 
 # Team names
-- Karen Tatiana Mora Merchán
-- Sergio Alejandro Peña Pinto
-- Andrés Rodríguez del Toro
+- Karen Tatiana Mora Merchán - Developer FrontEnd
+- Sergio Alejandro Peña Pinto - Developer BackEnd
+- Andrés Rodríguez del Toro - Developer BackEnd
