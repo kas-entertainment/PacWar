@@ -129,10 +129,8 @@ public class InMemoryPacWarPersistence implements PacWarPersistence{
 
     @Override
     public void logIn(String nickname, String password) {
-        boolean temp=false;
         for(int i=0; i<jugadores.size();i++){
             if(jugadores.get(i).getNickName().equals(nickname)){
-                temp=true;
                 break;
             }
         }

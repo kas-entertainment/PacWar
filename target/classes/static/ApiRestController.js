@@ -28,9 +28,9 @@ var ApiRestController = (function () {
                 mensaje.innerHTML = 'El nuevo Post ha sido almacenado con id: ' + res.data.id;
             }
         })
-        .catch(function (err) {
+        /*.catch(function (err) {
             console.log(err);
-        });
+        });*/
     };
 
 

@@ -47,8 +47,8 @@ public class PacWarAPIController {
         }
     }
     
-    @RequestMapping(method = RequestMethod.GET, value ="/{logIn}")
-    public ResponseEntity<?> logIn(@PathVariable("logIn") String nickname, @PathVariable("logIn") String password){
+    @RequestMapping(method = RequestMethod.GET, value ="/{nickname}/{password}")
+    public ResponseEntity<?> logIn(@PathVariable String nickname, @PathVariable String password){
         try{
             pacwarServices.logIn(nickname,password);
             return new ResponseEntity<>("Creado Correctamente",HttpStatus.ACCEPTED);
