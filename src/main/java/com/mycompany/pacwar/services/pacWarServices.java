@@ -5,7 +5,7 @@
  */
 package com.mycompany.pacwar.services;
 
-import com.mycompany.pacwar.persistence.Jugador;
+import com.mycompany.pacwar.model.Jugador;
 import com.mycompany.pacwar.persistence.PacWarException;
 import com.mycompany.pacwar.persistence.PacWarPersistence;
 import java.util.ArrayList;
@@ -22,8 +22,8 @@ public class pacWarServices {
     @Autowired
     PacWarPersistence pacwarPersistence;
     
-    public void addPlayer(String name, String lastName, String nikName, String email, String password){
-        pacwarPersistence.addPlayer(name, lastName, nikName, email,password);
+    public void addPlayer(String name, String lastName, String email, String nikName, String password){
+        pacwarPersistence.addPlayer(name, lastName, email, nikName,password);
     }
     public Jugador getJugadorByName(String nikName){
         return pacwarPersistence.getJugadorByName(nikName);

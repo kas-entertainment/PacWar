@@ -1,9 +1,9 @@
-var ApiRestControllerModule = (function () {
+var ApiRestController = (function () {
 
 
     iniciarSesion = function () {
-        axios.get('http://localhost:8080/pacwar/login', 
-        { params: {name: document.getElementById('nikName').value,
+        axios.get('http://localhost:8080/pacwar/logIn', 
+        { params: {name: document.getElementById('nickName').value,
         password: document.getElementById('password').value
         }})
         .then(function(res) {
@@ -11,8 +11,6 @@ var ApiRestControllerModule = (function () {
         })
         .catch(function(err) {
             console.log(err);
-        }).then(function(){
-            
         })
     };
 
@@ -22,7 +20,7 @@ var ApiRestControllerModule = (function () {
             name: document.getElementById('name').value,
             lastName: document.getElementById('lastName').value,
             email: document.getElementById('email').value,
-            nikName: document.getElementById('nikName').value,
+            nikName: document.getElementById('nickName').value,
             password: document.getElementById('password').value
         })
         .then(function (res) {
@@ -32,9 +30,6 @@ var ApiRestControllerModule = (function () {
         })
         .catch(function (err) {
             console.log(err);
-        })
-        .then(function () {
-        loading.style.display = 'none';
         });
     };
 
