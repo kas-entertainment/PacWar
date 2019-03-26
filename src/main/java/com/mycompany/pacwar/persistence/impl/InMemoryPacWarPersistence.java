@@ -7,7 +7,7 @@ package com.mycompany.pacwar.persistence.impl;
 
 import com.mycompany.pacwar.game.BattleException;
 import com.mycompany.pacwar.model.actors.Pacman;
-import com.mycompany.pacwar.persistence.Jugador;
+import com.mycompany.pacwar.model.Jugador;
 import com.mycompany.pacwar.persistence.PacWarException;
 import com.mycompany.pacwar.persistence.PacWarPersistence;
 import java.util.ArrayList;
@@ -31,18 +31,18 @@ public class InMemoryPacWarPersistence implements PacWarPersistence{
     public InMemoryPacWarPersistence(){
         String name="karen";
         String lastName="mora";
-        String nikName="moris";
+        String nickName="moris";
         String email="karen.mora@mai.escuelaing.edu.co";
         String password="12345";
-        Jugador gamer = new Jugador(name, lastName, nikName, email, password);
-        jugadores.put(nikName, gamer);
+        Jugador gamer = new Jugador(name, lastName, email, nickName, password);
+        jugadores.put(nickName, gamer);
         
         String nameB="andres";
         String lastNameB="pkas";
         String nikNameB="andrew";
         String emailB="andres.mora@mai.escuelaing.edu.co";
         String passwordB="12345";
-        Jugador gamerB= new Jugador(nameB, lastNameB, nikNameB, emailB, passwordB);
+        Jugador gamerB= new Jugador(nameB, lastNameB,emailB ,nikNameB, passwordB);
         jugadores.put(nikNameB, gamerB);
         
         String nameC="sergio";
@@ -50,15 +50,15 @@ public class InMemoryPacWarPersistence implements PacWarPersistence{
         String nikNameC="chechomon";
         String emailC="sergio.pena@mai.escuelaing.edu.co";
         String passwordC="12345";
-        Jugador gamerC = new Jugador(nameC, lastNameC, nikNameC, emailC, passwordC);
+        Jugador gamerC = new Jugador(nameC, lastNameC,emailC,nikNameC, passwordC);
         jugadores.put(nikNameC, gamerC);
         
     }
 
     @Override
-    public void addPlayer(String name, String lastName, String nikName, String email, String password) {
+    public void addPlayer(String name, String lastName, String email, String nikName, String password) {
         Jugador jugador=null;
-        jugador=new Jugador(name, lastName, nikName,email,password);
+        jugador=new Jugador(name,lastName,email,nikName,password);
         jugadores.put(nikName, jugador);
     }
 
@@ -129,10 +129,8 @@ public class InMemoryPacWarPersistence implements PacWarPersistence{
 
     @Override
     public void logIn(String nickname, String password) {
-        boolean temp=false;
         for(int i=0; i<jugadores.size();i++){
-            if(jugadores.get(i).getNikName().equals(nickname)){
-                temp=true;
+            if(jugadores.get(i).getNickName().equals(nickname)){
                 break;
             }
         }

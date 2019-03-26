@@ -5,7 +5,7 @@
  */
 package com.mycompany.pacwar.controller;
 
-import com.mycompany.pacwar.persistence.Jugador;
+import com.mycompany.pacwar.model.Jugador;
 import com.mycompany.pacwar.services.pacWarServices;
 import java.util.logging.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,15 +38,16 @@ public class PacWarAPIController {
     @RequestMapping(method = RequestMethod.POST, value ="/register", consumes = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<?> crearJugador(@RequestBody Jugador jugador){
         try{
-            pacwarServices.addPlayer(jugador.getName(),jugador.getLastName(),jugador.getNikName(),jugador.getEmail(),jugador.getPassword());
+            pacwarServices.addPlayer(jugador.getName(),jugador.getLastName(),jugador.getEmail(),jugador.getNickName(),jugador.getPassword());
             return new ResponseEntity<>("Creado Correctamente",HttpStatus.ACCEPTED);
         }catch(Exception ex){
+            System.out.println("entroMal");
             Logger.getLogger(PacWarAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.BAD_REQUEST);
         }
     }
     
-    @RequestMapping(method = RequestMethod.GET, value ="/login")
+    @RequestMapping(method = RequestMethod.GET, value ="/{nickname}/{password}")
     public ResponseEntity<?> logIn(@PathVariable String nickname, @PathVariable String password){
         try{
             pacwarServices.logIn(nickname,password);

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.pacwar.persistence;
+package com.mycompany.pacwar.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -13,18 +13,18 @@ import java.util.ArrayList;
  * @author karen
  */
 public class Jugador implements Serializable{
-    private String name;
-    private String lastName;
+    public String name;
+    public String lastName;
     private String email;
-    private String nikName;
-    private String password;
+    public String nickName;
+    public String password;
     
     public Jugador(){}
 
-    public Jugador(String name, String lastName, String nikName, String email, String password) {
+    public Jugador(String name, String lastName, String email, String nickName, String password) {
         this.name=name;
         this.lastName=lastName;
-        this.nikName=nikName;
+        this.nickName=nickName;
         this.email=email;
         this.password=password;
     }
@@ -47,8 +47,8 @@ public class Jugador implements Serializable{
         return email;
     }
 
-    public String getNikName() {
-        return nikName;
+    public String getNickName() {
+        return nickName;
     }
     
     public void setName(String name) {
@@ -63,8 +63,8 @@ public class Jugador implements Serializable{
         this.email = email;
     }
 
-    public void setNikName(String nikName) {
-        this.nikName = nikName;
+    public void setNickName(String nikName) {
+        this.nickName = nikName;
     }
     
     public void setIdSala(String password) {

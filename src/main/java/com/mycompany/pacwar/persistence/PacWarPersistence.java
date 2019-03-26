@@ -5,6 +5,7 @@
  */
 package com.mycompany.pacwar.persistence;
 
+import com.mycompany.pacwar.model.Jugador;
 import com.mycompany.pacwar.game.BattleException;
 import com.mycompany.pacwar.model.actors.Pacman;
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ import java.util.Set;
  */
 public interface PacWarPersistence {
     
-    public void addPlayer(String name, String lastName, String nikName, String email, String password);
+    public void addPlayer(String name, String lastName, String email, String nikName, String password);
 
     public Jugador getJugadorByName(String nikName);
 

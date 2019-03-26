@@ -1,11 +1,9 @@
-#                                         PacWar
+**PacWar(BackEnd-FrontEnd)**
+======
+*Proyecto desarrollado en el periodo académico 2019-1 por KAS-Entertainment para el curso Arquitecturas de Software (ARSW)*
 
-
-
-
-
-
-
+# Profesor
+  ##### Diego Alfonso Prieto Torres
 
 # Abstract 
 It is an alternative to the original game PAC-MAN where the goal is to eat all the small points and other prizes like fruits to be able to pass the level, managing to dodge the four ghosts Shadow (Blinky), Speedy (Pinky), Bashful (Inky) and Pokey (Clyde), go through the maze whose function is to try to capture Pac-Man, each ghost has a different ability to catch it.
@@ -14,7 +12,6 @@ For this alternative we will have more than one pacman, which will compete to ea
 
 
 Each player dies the moment he is hit twice by one or more ghosts or at the moment when another player attacks him with a bomb and he does not have to defend himself.
-
 
 
 At the moment to log in the game, then they can create a game and select a map, join a game already created, see their game statistics which would be: better score as a pacman or ghost, number of ghosts or pacman eliminated, time of longest duration and number of games won respectively.
@@ -35,6 +32,39 @@ During the game the players will be able to see their scores, number of murders,
 
 There are different types of levels or labyrinths depending on the number of people who wish to interact in the game. Our proposal will add more players, and modify the skills of the original characters to give the project a plus.
 
+# Purpose
+
+Create a game that is entertaining for all ages, easy to use and fun for different users who can interact anywhere in the world
+
+# Problem
+
+Have an application as competent as possible in the market, be the best in the implementation of the game Pacman as an alternative to the accustomed and attract many people of different ages.
+
+# Demo
+
+* This is the main page where we can see the different functionalities of the project and interact with them.
+
+![](src/main/resources/static/img/Principal.PNG)
+
+* Here we can see a brief description of the objective and of each one of the biographies of us.
+
+![](src/main/resources/static/img/About.PNG)
+
+* In this page we can see the services that our application offers for the clients that use it.
+
+![](src/main/resources/static/img/Servicios.PNG)
+
+* This is where we can create an account so that it is easier to access the application and all our data is stored in it.
+
+![](src/main/resources/static/img/CrearCuenta.PNG)
+
+* On this page we can access our account easily.
+
+![](src/main/resources/static/img/Ingresar.PNG)
+
+* Here we have a prototype for when it is implemented, we can see different games that are being played at the same time.
+
+![](src/main/resources/static/img/EnVivo.PNG)
 
 # Board elements
 - Player: its function is to take all the possible points, at the same time hide from the ghosts, defend against the opponents and attack the other players to be the only player on the board and win.
@@ -94,18 +124,26 @@ There are different types of levels or labyrinths depending on the number of peo
         
 # Model E-R
 
-![](src/main/resources/static/img/ModeloER.jpeg)
 
 # User stories
 
 https://tree.taiga.io/project/karenmora-pacwar/timeline
 
+# Instalation 
 
-# Diagramas
+This application needs installed:
+
+* Java
+* Tomcat
+* Spring
+* SQL
+* UML
+
+# Class Diagram
 
 ![Alt text](diagrama.jpeg)
 
 # Team names
-- Karen Tatiana Mora Merchán
-- Sergio Alejandro Peña Pinto
-- Andrés Rodríguez del Toro
+- Karen Tatiana Mora Merchán - Developer FrontEnd
+- Sergio Alejandro Peña Pinto - Developer BackEnd
+- Andrés Rodríguez del Toro - Developer BackEnd

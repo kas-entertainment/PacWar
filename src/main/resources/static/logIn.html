@@ -18,16 +18,20 @@ and open the template in the editor.
         <h1 style="text-align: center; color: #ffffff">INGRESA</h1>
         <br><br>
         <div id="ingresar">
-        <form name="log" method="POST" style="color: #ffffff; text-align: center" action="perfil.html">
-            <label for="nikName">NikName</label>
-            <input name="nikName" id="nikName" type="text" class="Input" value="" size="17"/>
+        <form name="log" method="GET" style="color: #ffffff; text-align: center" action="perfil.html">
+            <label for="nickName">NickName</label>
+            <input name="nickName" id="nickName" type="text" class="Input" value="" size="17"/>
             <br><br>
             <label for="password">Password</label>
             <input name="password" id="password" type="password" class="Input" value="" size="17"/>
             <br><br><br>
+<<<<<<< HEAD
             <a onclick="logIn()" class="btn btn-outline-secondary my-2 my-sm-0">Log In</a>
             <!--a onclick="ApiRestControllerModule.iniciarSesion()" class="btn btn-outline-secondary my-2 my-sm-0">Log In</a-->
             <!--button name="button" onclick="app.getCinemaByName($('#nikName').val(),$('#password').val())">Buscar</button-->
+=======
+            <a onclick="ApiRestController.iniciarSesion()" class="btn btn-outline-secondary my-2 my-sm-0">Log In</a>
+>>>>>>> 5bbb29ef1bd3e3440edcc5f29beb88fceb68ccf1
             &nbsp;&nbsp;&nbsp;&nbsp;
             <a href="index.html" class="btn btn-outline-secondary my-2 my-sm-0">Cancelar</a>
         </form>
