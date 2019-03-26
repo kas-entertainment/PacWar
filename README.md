@@ -38,7 +38,33 @@ Create a game that is entertaining for all ages, easy to use and fun for differe
 
 # Problem
 
+Have an application as competent as possible in the market, be the best in the implementation of the game Pacman as an alternative to the accustomed and attract many people of different ages.
+
 # Demo
+
+* This is the main page where we can see the different functionalities of the project and interact with them.
+
+![](src/main/resources/static/img/Principal.PNG)
+
+* Here we can see a brief description of the objective and of each one of the biographies of us.
+
+![](src/main/resources/static/img/About.PNG)
+
+* In this page we can see the services that our application offers for the clients that use it.
+
+![](src/main/resources/static/img/Servicios.PNG)
+
+* This is where we can create an account so that it is easier to access the application and all our data is stored in it.
+
+![](src/main/resources/static/img/CrearCuenta.PNG)
+
+* On this page we can access our account easily.
+
+![](src/main/resources/static/img/Ingresar.PNG)
+
+* Here we have a prototype for when it is implemented, we can see different games that are being played at the same time.
+
+![](src/main/resources/static/img/EnVivo.PNG)
 
 # Board elements
 - Player: its function is to take all the possible points, at the same time hide from the ghosts, defend against the opponents and attack the other players to be the only player on the board and win.
