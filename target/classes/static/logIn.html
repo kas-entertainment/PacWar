@@ -25,23 +25,23 @@ and open the template in the editor.
             <label for="password">Password</label>
             <input name="password" id="password" type="password" class="Input" value="" size="17"/>
             <br><br><br>
-            <a onclick="ApiRestControllerModule.iniciarSesion()" class="btn btn-outline-secondary my-2 my-sm-0">Log In</a>
+            <a onclick="logIn()" class="btn btn-outline-secondary my-2 my-sm-0">Log In</a>
+            <!--a onclick="ApiRestControllerModule.iniciarSesion()" class="btn btn-outline-secondary my-2 my-sm-0">Log In</a-->
             &nbsp;&nbsp;&nbsp;&nbsp;
             <a href="index.html" class="btn btn-outline-secondary my-2 my-sm-0">Cancelar</a>
         </form>
         </div>
 
-        <!--script language='javaScript'>
+        <script language='javaScript'>
             function logIn(){
-                alert("hola");
                 if(document.log.password.value=='admin' && document.log.nikName.value=='admin'){
-                    alert("Bienvenida "+document.log.password.value);
-                    document.log.submit();
+                    alert("Bienvenido "+document.log.password.value);
+                    location.href ="http://localhost:8080/perfil.html";
                 }else{
                     alert("Ingrese los datos correctos");
                 }
             }
-        </script-->
+        </script>
         <script src="vendor/jquery/jquery.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
