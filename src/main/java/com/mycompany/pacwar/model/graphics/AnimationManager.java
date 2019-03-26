@@ -14,17 +14,6 @@ import java.util.HashMap;
 import java.awt.Image;
 import java.io.FileNotFoundException;
 
-/**
- * Clase AnimationManager:
- *
- * Esta clase tiene el propósito de gestionar animaciones de los personajes del
- * juego.
- *
- * TODO: - Establecer un sistema de pausa de animación.
- *
- * @author Daniel González Zaballos <dgzaballos@gmail.com>
- *
- */
 public class AnimationManager {
 
     private String current_animation;
