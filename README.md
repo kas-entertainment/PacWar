@@ -1,8 +1,8 @@
-***PacWar(BackEnd-FrontEnd)***
+**PacWar(BackEnd-FrontEnd)**
 ======
 *Proyecto desarrollado en el periodo académico 2019-1 por KAS-Entertainment para el curso Arquitecturas de Software (ARSW)*
 
-Profesor:
+# Profesor
   -------
   ##### Diego Alfonso Prieto Torres
 
