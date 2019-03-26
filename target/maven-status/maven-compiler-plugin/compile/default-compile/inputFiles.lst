@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\game\BattleImpl.java
 C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\persistence\PacWarPersistence.java
 C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\logic\GhostConfig.java
@@ -35,3 +36,42 @@ C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycomp
 C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\PacWarMain.java
 C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\Main.java
 C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\hud\HUD.java
+=======
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\game\BattleImpl.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\pickups\Dot.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\persistence\impl\InMemoryPacWarPersistence.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\level\LevelLoader.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\Shield.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\persistence\Jugador.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\game\BattleException.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\Player.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\graphics\AnimationManager.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\persistence\PacWarException.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\Bomb.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\level\Level.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\level\Board.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\GameException.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\Power.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\Admin.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\Fruit.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\logic\Config.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\pickups\SuperDot.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\logic\GhostConfig.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\actors\Movable.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\actors\Ghost.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\graphics\Animation.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\pickups\Pickable.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\controller\PacWarAPIController.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\Star.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\hud\HUD.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\game\PacWarException.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\actors\Pacman.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\Food.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\services\pacWarServices.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\Main.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\game\PacWar.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\PacWarMain.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\persistence\PacWarPersistence.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\game\PacWarImpl.java
+E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\game\Battle.java
+>>>>>>> c781d95c83e31282e155ba768256bf036ef6e71d

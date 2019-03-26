@@ -137,8 +137,7 @@ public class Level {
     }
 
     public void createImageSet() {
-        System.out.println("src/main/resources/L0.png");
-        Image ii = new ImageIcon("src/main/resources/L0.png").getImage();
+        Image ii = new ImageIcon("src/main/resources/static/img/tilesets/default/0.png").getImage();
         images.put("navigable", ii);
 
     }
