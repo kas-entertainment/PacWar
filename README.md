@@ -1,10 +1,6 @@
-#                                         PacWar
-
-
-
-
-
-
+***PacWar(BackEnd-frontEnd)***
+======
+*Proyecto desarrollado en el periodo académico 2019-1 por KAS-Entertainment para el curso Arquitecturas de Software (ARSW)*
 
 
 # Abstract 
