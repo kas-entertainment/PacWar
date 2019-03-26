@@ -66,6 +66,21 @@ Have an application as competent as possible in the market, be the best in the i
 
 ![](src/main/resources/static/img/EnVivo.PNG)
 
+* Each player will have their own profile, in which they will have points and different attributes.
+
+![](admin.png)
+
+![](admin2.png)
+
+![](perfil.png)
+
+* Players can see their history and statistics to see if they have improved in the game.
+
+![](history.png)
+
+![](statistics.png)
+
+
 # Board elements
 - Player: its function is to take all the possible points, at the same time hide from the ghosts, defend against the opponents and attack the other players to be the only player on the board and win.
 
