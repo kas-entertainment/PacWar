@@ -136,6 +136,8 @@ This application needs installed:
 * Java
 * Tomcat
 * Spring
+* SQL
+* UML
 
 # Class Diagram
 
