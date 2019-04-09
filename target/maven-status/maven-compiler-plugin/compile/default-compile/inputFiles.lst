@@ -1,77 +1,36 @@
-<<<<<<< HEAD
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\game\BattleImpl.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\persistence\PacWarPersistence.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\logic\GhostConfig.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\actors\Ghost.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\actors\Movable.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\actors\Pacman.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\GameException.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\Shield.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\logic\Config.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\persistence\PacWarException.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\Fruit.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\controller\PacWarAPIController.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\persistence\Jugador.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\pickups\Dot.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\Player.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\persistence\impl\InMemoryPacWarPersistence.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\game\BattleException.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\level\LevelLoader.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\services\pacWarServices.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\Admin.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\game\PacWarImpl.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\graphics\Animation.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\graphics\AnimationManager.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\game\PacWar.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\pickups\Pickable.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\Power.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\pickups\SuperDot.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\game\Battle.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\Bomb.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\game\PacWarException.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\Food.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\level\Board.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\Star.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\level\Level.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\PacWarMain.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\Main.java
-C:\Users\Andres\Documents\universidad\arsw\negri\PacWar\src\main\java\com\mycompany\pacwar\model\hud\HUD.java
-=======
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\game\BattleImpl.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\pickups\Dot.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\persistence\impl\InMemoryPacWarPersistence.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\level\LevelLoader.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\Shield.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\persistence\Jugador.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\game\BattleException.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\Player.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\graphics\AnimationManager.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\persistence\PacWarException.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\Bomb.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\level\Level.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\level\Board.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\GameException.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\Power.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\Admin.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\Fruit.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\logic\Config.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\pickups\SuperDot.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\logic\GhostConfig.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\actors\Movable.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\actors\Ghost.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\graphics\Animation.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\pickups\Pickable.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\controller\PacWarAPIController.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\Star.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\hud\HUD.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\game\PacWarException.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\actors\Pacman.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\Food.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\services\pacWarServices.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\model\Main.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\game\PacWar.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\PacWarMain.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\persistence\PacWarPersistence.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\game\PacWarImpl.java
-E:\DOCUMENTOS SERGIO\ARSW\PacWar\PacWar\src\main\java\com\mycompany\pacwar\game\Battle.java
->>>>>>> c781d95c83e31282e155ba768256bf036ef6e71d
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/PacWarMain.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/Shield.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/logic/Config.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/persistence/impl/InMemoryPacWarPersistence.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/pickups/Dot.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/hud/HUD.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/pickups/Pickable.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/GameException.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/game/PacWar.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/game/BattleImpl.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/persistence/PacWarException.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/game/Battle.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/logic/GhostConfig.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/actors/Pacman.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/pickups/SuperDot.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/graphics/AnimationManager.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/Main.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/actors/Ghost.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/graphics/Animation.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/game/PacWarException.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/game/BattleException.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/actors/Movable.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/persistence/PacWarPersistence.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/Food.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/Star.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/Admin.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/services/pacWarServices.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/controller/PacWarAPIController.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/Power.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/game/PacWarImpl.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/Fruit.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/level/Level.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/Jugador.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/Bomb.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/level/LevelLoader.java
+/home/2092692/Desktop/PacWar/src/main/java/com/mycompany/pacwar/model/level/Board.java
