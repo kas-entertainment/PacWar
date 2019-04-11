@@ -5,10 +5,20 @@
  */
 package com.mycompany.pacwar.persistence;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Value;
 /**
  *
- * @author 2092692
+ * @author Karen Mora
  */
+@Component
+@Qualifier("UserStadisticsPostgresRepository")
 public class UserStadisticsPostgresRepository {
-    
+    @Value("${spring.datasource.url}")
+    private String urlBd;
+    @Value("${spring.datasource.username}")
+    private String userNameBd;
+    @Value("${spring.datasource.password}")
+    private String passwordBd;
 }
