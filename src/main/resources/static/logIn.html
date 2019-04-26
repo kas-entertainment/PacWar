@@ -34,12 +34,14 @@ and open the template in the editor.
 
         <script language='javaScript'>
             function logIn(){
+                /**sessionStorage.setItem("id",document.log.nikName.value);
                 if(document.log.password.value=='admin' && document.log.nikName.value=='admin'){
                     alert("Bienvenido "+document.log.password.value);
                     location.href ="http://localhost:8080/perfil.html";
                 }else{
                     alert("Ingrese los datos correctos");
-                }
+                }**/
+                iniciarSesion()
             }
         </script>
         <script src="vendor/jquery/jquery.min.js"></script>

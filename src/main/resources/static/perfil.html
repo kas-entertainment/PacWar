@@ -19,20 +19,21 @@ and open the template in the editor.
         <div class="col-lg-6" style="text-align: left; color: #ffffff">
             <img class="img-fluid rounded" src="/img/perfil.png" alt="">
             <br><br>
-            <p> Name: admin </p>
-            <p> Last Name: </p>
-            <p> E-mail: admin@algo.com</p>
-            <p> NikName: admin</p>
+            <p id="name"></p>
+            <p id="last"></p>
+            <p id="email"></p>
+            <p id="nik"> </p>
         </div>
         <div style="text-align: end">            
-            <a href="gameRoom.html" class="btn btn-outline-secondary my-2 my-sm-0" style="background-color: #5a6268; color: #ffffff">Strat New Game</a>
+            <a href="rooms.html" class="btn btn-outline-secondary my-2 my-sm-0" style="background-color: #5a6268; color: #ffffff">Play</a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="stadistics.html" class="btn btn-outline-secondary my-2 my-sm-0" style="background-color: #5a6268; color: #ffffff">See Statistics</a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="gameHistory.html" class="btn btn-outline-secondary my-2 my-sm-0" style="background-color: #5a6268; color: #ffffff">See History</a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="index.html" class="btn btn-outline-secondary my-2 my-sm-0" style="background-color: #5a6268; color: #ffffff">Log Out</a>
+            <a href="index.html" onclick="logout()" class="btn btn-outline-secondary my-2 my-sm-0" style="background-color: #5a6268; color: #ffffff">Log Out</a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
+    <script src="js/perfil.js"></script>
     </body>
 </html>

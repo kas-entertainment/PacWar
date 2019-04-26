@@ -5,8 +5,13 @@
  */
 package com.mycompany.pacwar.controller;
 
+import com.mycompany.pacwar.game.PacWarException;
 import com.mycompany.pacwar.model.Jugador;
-import com.mycompany.pacwar.services.pacWarServices;
+import com.mycompany.pacwar.mongodb.User;
+import com.mycompany.pacwar.mongodb.UserRepository;
+import com.mycompany.pacwar.services.PacWarServices;
+
+import java.util.Optional;
 import java.util.logging.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -32,16 +37,19 @@ import org.springframework.web.bind.annotation.RestController;
 @Controller
 public class PacWarAPIController {
     @Autowired
-    private pacWarServices pacwarServices;
-    
+    UserRepository ur;
+
     //POST
-    @RequestMapping(method = RequestMethod.POST, value ="/register", consumes = {MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<?> crearJugador(@RequestBody Jugador jugador){
+    @RequestMapping(method = RequestMethod.POST, value ="/register")
+    public ResponseEntity<?> crearJugador(@RequestBody User user){
         try{
-            pacwarServices.addPlayer(jugador.getName(),jugador.getLastName(),jugador.getEmail(),jugador.getNickName(),jugador.getPassword());
-            return new ResponseEntity<>("Creado Correctamente",HttpStatus.ACCEPTED);
+            if(ur.findById(user.id).equals(Optional.empty())) {
+                ur.save(user);
+            }else{
+                throw new PacWarException("User already exists");
+            }
+            return new ResponseEntity<>(HttpStatus.ACCEPTED);
         }catch(Exception ex){
-            System.out.println("entroMal");
             Logger.getLogger(PacWarAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.BAD_REQUEST);
         }
@@ -50,8 +58,7 @@ public class PacWarAPIController {
     @RequestMapping(method = RequestMethod.GET, value ="/{nickname}/{password}")
     public ResponseEntity<?> logIn(@PathVariable String nickname, @PathVariable String password){
         try{
-            pacwarServices.logIn(nickname,password);
-            return new ResponseEntity<>("Creado Correctamente",HttpStatus.ACCEPTED);
+            return new ResponseEntity<>(ur.findByIdAndPassword(nickname,password),HttpStatus.ACCEPTED);
         }catch(Exception ex){
             Logger.getLogger(PacWarAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.BAD_REQUEST);
@@ -59,28 +66,9 @@ public class PacWarAPIController {
     }
     
     
-    //GET
-    @RequestMapping(value="/users", method = RequestMethod.GET)
-    public ResponseEntity<?> getAllUsers(){
-        try{
-            return new ResponseEntity<> (pacwarServices.getAllGamers(),HttpStatus.ACCEPTED);
-        }catch(Exception ex){
-            Logger.getLogger(PacWarAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>("NO FUNCIONA",HttpStatus.NOT_FOUND);
-        }
-    }
-    
-    @RequestMapping(value="/users/{nickName}", method = RequestMethod.GET)
-    public ResponseEntity<?> getJugadorByName(@PathVariable String nickName){
-        try{
-            return new ResponseEntity<> (pacwarServices.getJugadorByName(nickName),HttpStatus.ACCEPTED);
-        }catch(Exception ex){
-            Logger.getLogger(PacWarAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>("NO FUNCIONA",HttpStatus.NOT_FOUND);
-        }
-    }
+
     
     
-    //
+
 
 }

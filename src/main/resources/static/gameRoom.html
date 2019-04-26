@@ -15,68 +15,19 @@ and open the template in the editor.
         <link href="css/modern-business.css" rel="stylesheet">
     </head>
     <body style="background-image:url(/img/fn.jpg);background-size: cover">
-        
-        <!--div class="container" style="text-align: center; color: #ffffff">
-            <label for="email">NameUsuario 1</label>&nbsp;
-            <label for="email">NameUsuario 2</label>&nbsp;
-            <label for="email">NameUsuario 3</label>&nbsp;
-            <label for="email">NameUsuario 4</label>&nbsp;
-            <label for="email">NameUsuario 5</label>&nbsp;
-            <label for="email">NameUsuario 6</label>&nbsp;
-            <label for="email">NameUsuario 7</label>&nbsp;
-            <label for="email">NameUsuario 8</label>&nbsp;
-            <label for="email">NameUsuario 9</label>&nbsp;
-        </div-->
-        <div class="row" style="color: #ffffff">
-            <br><br>
-            <div class="col-lg-1">
-                <p>POSITIONS</p>
-                <p>#1 name</p>
-                <p>#2 name</p>
-                <p>#3 name</p>
-                <p>#4 name</p>
-                <p>#5 name</p>
-                <p>#6 name</p>
-                <p>#7 name</p>
-                <p>#8 name</p>
-                <p>#9 name</p>
-                <p>#10 name</p>
-            </div>
-            <div class="col-lg-7">
-                <img class="img-fluid rounded" src="/img/lab4.jpg" alt="">
-            </div>
-            <div class="col-lg-1">
-                <p>POWERS</p>
-                <p>power</p>
-                <p>power</p>
-                <p>poerw</p>
-            </div>
-            
-            <div class="col-lg-1">
-                <p>DEAD</p>
-                <h6>NameUsr 10</h6>
-                <h6>NameUsr 03</h6>
-                <h6>NameUsr 05</h6>
-            </div>
-            
-            <div class="col-lg-1">
-                <p>LIVE</p>
-                <h6>NameUsr 7</h6>
-                <h6>NameUsr 9</h6>
-                <h6>NameUsr 2</h6>
-            </div>
-            
-            <div class="col-lg-1">
-                <p>POINTS</p>
-                <h6>20</h6>
-                <h6>14</h6>
-                <h6>34</h6>
-            </div>
-          </div>
-        
-        <div class="container" style="text-align: end; color: #ffffff">
-            <br><br>
-            <a href="perfil.html" class="btn btn-outline-secondary my-2 my-sm-0">Exit Game</a>
+        <div id="game">
+
         </div>
+        <div style="text-align: end">
+
+            <a href="rooms.html" class="btn btn-outline-secondary my-2 my-sm-0" style="background-color: #5a6268; color: #ffffff">Back</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="/webjars/jquery/jquery.min.js"></script>
+        <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+        <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+        <script src="js/GameRoomBackEnd.js"></script>
+        <script src="js/GameRoomFrontEnd.js"></script>
     </body>
 </html>
