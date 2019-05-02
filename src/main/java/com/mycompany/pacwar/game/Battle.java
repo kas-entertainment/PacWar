@@ -7,6 +7,7 @@ package com.mycompany.pacwar.game;
 
 import com.mycompany.pacwar.model.actors.Pacman;
 import com.mycompany.pacwar.model.*;
+import com.mycompany.pacwar.model.actors.Ghost;
 import java.util.ArrayList;
 
 /**
@@ -26,4 +27,12 @@ public interface Battle {
     void setId(int id);
     ArrayList<Pacman> getAllPacmansFromTeam(int team);
     void movePacman(String username,int key);
+    
+    
+    
+    ArrayList<Ghost> getAllGhost();
+    int findGhostTeam(Ghost ghost)throws BattleException;
+    Ghost getGhost(String username) throws BattleException;
+    ArrayList<Ghost> getAllGhostsFromTeam(int team);
+    void moveGhost(String username,int key);
 }

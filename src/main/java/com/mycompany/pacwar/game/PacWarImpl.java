@@ -5,6 +5,7 @@
  */
 package com.mycompany.pacwar.game;
 
+import com.mycompany.pacwar.model.actors.Ghost;
 import com.mycompany.pacwar.model.actors.Pacman;
 import java.util.HashMap;
 
@@ -24,7 +25,7 @@ public class PacWarImpl implements PacWar{
     public void removeRoom(int roomid) throws PacWarException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    /*
     @Override
     public void registerPlayerToRoom(int roomId, Pacman pacman, int team) throws PacWarException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -34,7 +35,8 @@ public class PacWarImpl implements PacWar{
     public void removePlayerToRoom(int roomId, Pacman pacman, int team) throws PacWarException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    */
+    
     @Override
     public HashMap<Integer, Battle> getRoomsMap() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -57,6 +59,23 @@ public class PacWarImpl implements PacWar{
 
     @Override
     public int getNextTeam(int roomId) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
+
+    @Override
+    public void registerPlayerToRoom(int roomId, Pacman pacman, Ghost gost, int team) throws PacWarException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void removePlayerToRoom(int roomId, Pacman pacman, Ghost gost, int team) throws PacWarException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Ghost getGhost(String username, int roomId, int team) throws PacWarException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

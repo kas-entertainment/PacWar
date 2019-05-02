@@ -89,5 +89,10 @@ public class PacWarServicesImpl implements PacWarServices {
         return main.getBackGroundItems(idRoom);
     }
 
+    @Override
+    public void moveGhost(String id, int key, int room) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 
 }

@@ -9,6 +9,31 @@ function createRoom() {
         })
 }
 
+function getCharacter(){
+    var character=null;
+    
+    if($_POST['dato'] == "1")
+    {
+        character="pacman";
+    }
+    if($_POST['dato'] == "2")
+    {
+        character="blue";
+    }
+    if($_POST['dato'] == "3")
+    {
+        character="orange";
+    }
+    if($_POST['dato'] == "4")
+    {
+        character="pink";
+    }
+    if($_POST['dato'] == "5")
+    {
+        character="red";
+    }
+}
+
 function getRooms() {
     axios.get("/pacwar/game/rooms")
         .then(function (response) {

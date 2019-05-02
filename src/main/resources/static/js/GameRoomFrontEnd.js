@@ -4,14 +4,24 @@ var players = [];
 
 function inicial() {
     createPacMan()
-        .then(function (value) {
+            .then(function (value) {
                 getPacMans()
-                    .then(function (response) {
-                            putPacMans(response.data);
-                        }
-                    )
+                .then(function (response) {
+                    putPacMans(response.data);
+                }
+                )
+//    }
             }
-        );
+            );
+//    createGhost()
+//            .then(function (value) {
+//                getGhost()
+//                        .then(function (response) {
+//                            putGhost(response.data);
+//                        }
+//                        )
+//            }
+//            );
 }
 
 function start(){
@@ -76,6 +86,21 @@ function putPacMan(pacman) {
     }
     document.getElementById("game").innerHTML += agregar;
 }
+
+
+//function putGhost(ghost){
+//    agregar = "<img id='pacman"+ghost.id+"' style='position:absolute; width:"+ghost.size+"px; height:"+ghost.size+"px; top:"+ghost.posY+"px; left:"+ghost.posX+"px'";
+//    if(ghost.dirrection=="U"){
+//        agregar += " src='img/actors/ghost/blue/up-2.png'></img>"
+//    }else if(ghost.dirrection=="D"){
+//        agregar += " src='img/actors/ghost/blue/down-2.png'></img>"
+//    }else if(ghost.dirrection=="L"){
+//        agregar += " src='img/actors/ghost/blue/left-2.png'></img>"
+//    }else{
+//        agregar += " src='img/actors/ghost/blue/right-2.png'></img>"
+//    }
+//    document.getElementById("game").innerHTML += agregar;
+//}
 
 window.onkeydown = function (e) {
     var key = e.keyCode ? e.keyCode : e.which;

@@ -1,5 +1,6 @@
 package com.mycompany.pacwar.controller;
 
+import com.mycompany.pacwar.model.actors.Ghost;
 import com.mycompany.pacwar.newModel.Dot;
 import com.mycompany.pacwar.newModel.PacMan;
 import com.mycompany.pacwar.services.PacWarServices;
@@ -23,12 +24,26 @@ public class PacWarMessageController {
     @MessageMapping("/move.{room}")
     public void move(Move move, @DestinationVariable int room){
         pacwarServices.movePacMan(move.id,move.key,room);
+        pacwarServices.moveGhost(move.id,move.key,room);
     }
 
     @MessageMapping("/newpacman.{room}")
     public void newPacMan(PacMan pacMan,@DestinationVariable int room){
         smt.convertAndSend("/topic/newpacman."+room, pacMan);
     }
+    
+    /*
+    @MessageMapping("/newpacman.{room}")
+    public void newGhost(Ghost ghost,@DestinationVariable int room){
+        smt.convertAndSend("/topic/newpacman."+room, ghost);
+    }
+    
+    public void sendMovementGhost(Ghost ghost, int room){
+        smt.convertAndSend("/topic/move."+room,ghost);
+    }
+    
+    */
+    
 
     public void sendMovementPacMan(PacMan pacMan, int room){
         smt.convertAndSend("/topic/move."+room,pacMan);

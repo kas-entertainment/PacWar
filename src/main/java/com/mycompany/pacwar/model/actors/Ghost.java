@@ -33,7 +33,7 @@ public class Ghost extends Movable {
         super(x, y);
         state = CHASING;
         this.id = id;
-        this.imageset = imageset;
+        this.imageset = "blue";
         this.HvsV = HvsV;
         this.accuracy_threshold = accuracy_threshold;
         this.width = (int) (((long) size) * 0.95);

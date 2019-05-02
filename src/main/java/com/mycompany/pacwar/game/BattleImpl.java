@@ -8,6 +8,7 @@ package com.mycompany.pacwar.game;
 import com.mycompany.pacwar.model.actors.Pacman;
 import com.mycompany.pacwar.controller.PacWarAPIController;
 import com.mycompany.pacwar.model.*;
+import com.mycompany.pacwar.model.actors.Ghost;
 import java.util.*;
 
 /**
@@ -80,6 +81,34 @@ public class BattleImpl extends Thread implements Battle{
 
     @Override
     public void movePacman(String username, int key) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
+    
+    
+    @Override
+    public ArrayList<Ghost> getAllGhost() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int findGhostTeam(Ghost ghost) throws BattleException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Ghost getGhost(String username) throws BattleException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ArrayList<Ghost> getAllGhostsFromTeam(int team) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void moveGhost(String username, int key) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
