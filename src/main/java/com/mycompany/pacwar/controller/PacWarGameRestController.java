@@ -1,6 +1,7 @@
 package com.mycompany.pacwar.controller;
 
 import com.mycompany.pacwar.model.Jugador;
+import com.mycompany.pacwar.newModel.GHost;
 import com.mycompany.pacwar.newModel.PacMan;
 import com.mycompany.pacwar.services.PacWarServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,6 +57,17 @@ public class PacWarGameRestController {
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.BAD_REQUEST);
         }
     }
+    
+    @RequestMapping(method = RequestMethod.POST, value="/{roomId}/ghost")
+    public ResponseEntity<?> createGhost(@PathVariable(name = "roomId")int roomId, @RequestBody GHost ghost, String name){
+        try{
+            pwmc.newGhost(pacwarServices.addGhost(roomId, ghost, name), roomId, name);
+            return new ResponseEntity<>(HttpStatus.ACCEPTED);
+        }catch(Exception ex){
+            Logger.getLogger(PacWarAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>(ex.getMessage(),HttpStatus.BAD_REQUEST);
+        }
+    }
 
     @RequestMapping(method = RequestMethod.GET, value="/{roomId}/pacmans")
     public ResponseEntity<?> getPacMans(@PathVariable(name = "roomId")int roomId){
@@ -67,6 +79,17 @@ public class PacWarGameRestController {
         }
     }
 
+    @RequestMapping(method = RequestMethod.GET, value="/{roomId}/ghosts")
+    public ResponseEntity<?> getGhosts(@PathVariable(name = "roomId")int roomId,String name){
+        try{
+            return new ResponseEntity<>(pacwarServices.getGhosts(roomId,name),HttpStatus.ACCEPTED);
+        }catch(Exception ex){
+            Logger.getLogger(PacWarAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>(ex.getMessage(),HttpStatus.BAD_REQUEST);
+        }
+    }
+    
+    
     @RequestMapping(method = RequestMethod.GET, value = "/{roomId}/backgrounditems")
     public ResponseEntity<?> getBackGroundItems(@PathVariable(name = "roomId")int roomId){
         try{

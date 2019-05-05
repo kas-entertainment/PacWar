@@ -65,4 +65,16 @@ public class MainImpl implements Main{
         pwmc.sendDeleteDot(dot,idRoom);
     }
 
+    @Override
+    public GHost moveGHost(String id, int key, int idRoom) {
+        GHost ghost = null;
+        for(Room r:rooms){
+            if(r.getIdRoom()==idRoom){
+                ghost = r.moveGHost(id,key);
+                break;
+            }
+        }
+        return ghost;
+    }
+
 }

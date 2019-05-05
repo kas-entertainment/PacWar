@@ -47,8 +47,34 @@ public class Dot extends Element implements BackGroundItem{
         }
         return true;
     }
-
-
+    
+    
+    
+    @Override
+    public boolean doesMove(GHost ghost, int key) {
+        if(!capture) {
+            boolean touch = false;
+            if (key == 37) {//LEFT
+                if (Block.colision(ghost.posX - ghost.velocity, ghost.posY, ghost.posX + ghost.size - ghost.velocity, ghost.posY + ghost.size, posX, posY, posX + size, posY + size))
+                    touch = true;
+            } else if (key == 38) {//UP
+                if (Block.colision(ghost.posX, ghost.posY - ghost.velocity, ghost.posX + ghost.size, ghost.posY + ghost.size - ghost.velocity, posX, posY, posX + size, posY + size))
+                    touch = true;
+            } else if (key == 39) {//RIGHT
+                if (Block.colision(ghost.posX + ghost.velocity, ghost.posY, ghost.posX + ghost.size + ghost.velocity, ghost.posY + ghost.size, posX, posY, posX + size, posY + size))
+                    touch = true;
+            } else {//DOWN
+                if (Block.colision(ghost.posX, ghost.posY + ghost.velocity, ghost.posX + ghost.size, ghost.posY + ghost.size + ghost.velocity, posX, posY, posX + size, posY + size))
+                    touch = true;
+            }
+            if(touch){
+                capture = true;
+                room.removeDot(this);
+                ghost.addPoints();
+            }
+        }
+        return true;
+    }
 
     @Override
     public String getType() {

@@ -11,6 +11,8 @@ public interface Main {
     void createRoom(int id);
 
     PacMan movePacMan(String id, int key, int idRoom);
+    
+    GHost moveGHost(String id, int key, int idRoom);
 
     ArrayList<BackGroundItem> getBackGroundItems(int idRoom);
 

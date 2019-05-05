@@ -12,8 +12,19 @@ function createPacMan() {
     })
 }
 
+function createGhost() {
+    return axios.post("/pacwar/game/"+sessionStorage.getItem("room")+"/ghosts",{
+        "id":sessionStorage.getItem("id"),
+        "dirrection":"U"
+    })
+}
+
 function getPacMans(){
     return axios.get("/pacwar/game/"+sessionStorage.getItem("room")+"/pacmans")
+}
+
+function getGhosts(){
+    return axios.get("/pacwar/game/"+sessionStorage.getItem("room")+"/ghosts")
 }
 
 function move(key) {
@@ -29,6 +40,12 @@ function connectAndSuscribe() {
         });
         stompClient.subscribe("/topic/newpacman."+sessionStorage.getItem("room"), function (message) {
             putPacMan(JSON.parse(message.body));
+        });
+        stompClient.subscribe("/topic/move."+sessionStorage.getItem("room"),function(message){
+            moverGhost(JSON.parse(message.body));
+        });
+        stompClient.subscribe("/topic/newpacman."+sessionStorage.getItem("room"), function (message) {
+            putGhost(JSON.parse(message.body),name);
         });
         stompClient.subscribe("/topic/deletedot."+sessionStorage.getItem("room"),function (message) {
             deleteDot(JSON.parse(message.body))

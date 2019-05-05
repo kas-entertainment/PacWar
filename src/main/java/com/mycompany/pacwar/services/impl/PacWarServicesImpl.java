@@ -8,6 +8,7 @@ package com.mycompany.pacwar.services.impl;
 import com.mycompany.pacwar.controller.PacWarMessageController;
 import com.mycompany.pacwar.model.Jugador;
 import com.mycompany.pacwar.newModel.BackGroundItem;
+import com.mycompany.pacwar.newModel.GHost;
 import com.mycompany.pacwar.newModel.Main;
 import com.mycompany.pacwar.newModel.PacMan;
 import com.mycompany.pacwar.newModel.Room;
@@ -58,7 +59,12 @@ public class PacWarServicesImpl implements PacWarServices {
     public ArrayList<PacMan> getPacMans(int room) {
         return main.getRoom(room).getPacmans();
     }
-
+    
+    @Override
+    public ArrayList<GHost> getGhosts(int room, String name) {
+        return main.getRoom(room).getGHost();
+    }
+    
     @Override
     public ArrayList<Room> getRooms() {
         return main.getRooms();
@@ -74,6 +80,11 @@ public class PacWarServicesImpl implements PacWarServices {
         return main.getRoom(roomId).addPacMan(pacMan);
     }
 
+    @Override
+    public GHost addGhost(int roomId, GHost ghost, String name) {
+        return main.getRoom(roomId).addGHost(ghost);
+    }
+    
     @Override
     public void addRoom(int id) {
         main.createRoom(id);
@@ -91,8 +102,8 @@ public class PacWarServicesImpl implements PacWarServices {
 
     @Override
     public void moveGhost(String id, int key, int room) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        pwmc.sendMovementGhost(main.moveGHost(id, key, room),room);
     }
-
+    
 
 }

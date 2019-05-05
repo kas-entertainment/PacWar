@@ -1,7 +1,7 @@
 package com.mycompany.pacwar.controller;
 
-import com.mycompany.pacwar.model.actors.Ghost;
 import com.mycompany.pacwar.newModel.Dot;
+import com.mycompany.pacwar.newModel.GHost;
 import com.mycompany.pacwar.newModel.PacMan;
 import com.mycompany.pacwar.services.PacWarServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +32,13 @@ public class PacWarMessageController {
         smt.convertAndSend("/topic/newpacman."+room, pacMan);
     }
     
+    @MessageMapping("/newghost.{room}")
+    public void newGhost(GHost ghost,@DestinationVariable int room, String name){
+        smt.convertAndSend("/topic/newpacman."+room, ghost);
+    }
+    
+            
+    
     /*
     @MessageMapping("/newpacman.{room}")
     public void newGhost(Ghost ghost,@DestinationVariable int room){
@@ -51,6 +58,10 @@ public class PacWarMessageController {
 
     public void sendDeleteDot(Dot dot, int room){
         smt.convertAndSend("/topic/deletedot."+room,dot);
+    }
+
+    public void sendMovementGhost(GHost moveGHost, int room) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     static class Move{

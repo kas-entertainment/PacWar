@@ -1,27 +1,67 @@
 start();
 
 var players = [];
+var character="pacman";
 
-function inicial() {
-    createPacMan()
+function inicial(character) {
+    if(character.equals("pacman")){
+        createPacMan()
             .then(function (value) {
                 getPacMans()
                 .then(function (response) {
                     putPacMans(response.data);
                 }
                 )
-//    }
             }
             );
-//    createGhost()
-//            .then(function (value) {
-//                getGhost()
-//                        .then(function (response) {
-//                            putGhost(response.data);
-//                        }
-//                        )
-//            }
-//            );
+    }
+    
+    if(character.equals("blue")){
+        createGhost()
+            .then(function (value) {
+                getGhosts()
+                .then(function (response) {
+                    putGhostList(response.data,character);
+                }
+                )
+            }
+            );
+    }
+    
+    if(character.equals("orange")){
+        createGhost()
+            .then(function (value) {
+                getGhosts()
+                .then(function (response) {
+                    putGhostList(response.data,character);
+                }
+                )
+            }
+            );
+    }
+    
+    if(character.equals("pink")){
+        createGhost()
+            .then(function (value) {
+                getGhosts()
+                .then(function (response) {
+                    putGhostList(response.data,character);
+                }
+                )
+            }
+            );
+    }
+    if(character.equals("red")){
+        createGhost()
+            .then(function (value) {
+                getGhosts()
+                .then(function (response) {
+                    putGhostList(response.data,character);
+                }
+                )
+            }
+            );
+    }
 }
 
 function start(){
@@ -60,6 +100,12 @@ function putPacMans(list){
     }
 }
 
+function putGhostList(list,name){
+    for(var i = 0; i<list.length;i++){
+        putGhost(list[i],name)
+    }
+}
+
 function scores(){
     agregar = "";
     for(var i = 0;i<players.length;i++){
@@ -87,20 +133,26 @@ function putPacMan(pacman) {
     document.getElementById("game").innerHTML += agregar;
 }
 
+function putGhost(ghost,name) {
+    players.push(ghost);
+    agregar="<img id='pacman"+ghost.id+"' style='position:absolute; width:"+ghost.size+"px; height:"+ghost.size+"px; top:"+ghost.posY+"px; left:"+ghost.posX+"px'";
+    
+    if(pacman.dirrection=="U"){
+            agregar += "src/main/resources/static/img/actors/ghost/" + name + "/" + "up-1.png";
+            agregar += "src/main/resources/static/img/actors/ghost/" + name + "/" + "up-2.png";
+    }else if(pacman.dirrection=="D"){
+            agregar += "src/main/resources/static/img/actors/ghost/" + name + "/" + "down-1.png";
+            agregar += "src/main/resources/static/img/actors/ghost/" + name + "/" + "down-2.png";
+    }else if(pacman.dirrection=="L"){
+            agregar += "src/main/resources/static/img/actors/ghost/" + name + "/" + "left-1.png";
+            agregar += "src/main/resources/static/img/actors/ghost/" + name + "/" + "left-2.png";
+    }else{
+            agregar += "src/main/resources/static/img/actors/ghost/" + name + "/" + "right-1.png";
+            agregar += "src/main/resources/static/img/actors/ghost/" + name + "/" + "right-2.png";
+    }
+    document.getElementById("game").innerHTML += agregar;
+}
 
-//function putGhost(ghost){
-//    agregar = "<img id='pacman"+ghost.id+"' style='position:absolute; width:"+ghost.size+"px; height:"+ghost.size+"px; top:"+ghost.posY+"px; left:"+ghost.posX+"px'";
-//    if(ghost.dirrection=="U"){
-//        agregar += " src='img/actors/ghost/blue/up-2.png'></img>"
-//    }else if(ghost.dirrection=="D"){
-//        agregar += " src='img/actors/ghost/blue/down-2.png'></img>"
-//    }else if(ghost.dirrection=="L"){
-//        agregar += " src='img/actors/ghost/blue/left-2.png'></img>"
-//    }else{
-//        agregar += " src='img/actors/ghost/blue/right-2.png'></img>"
-//    }
-//    document.getElementById("game").innerHTML += agregar;
-//}
 
 window.onkeydown = function (e) {
     var key = e.keyCode ? e.keyCode : e.which;
@@ -119,6 +171,23 @@ function moverPacMan(body) {
         pacman.src='img/actors/pacman/left-2.png';
     }else{
         pacman.src='img/actors/pacman/right-2.png';
+    }
+    updatePlayers(body);
+    scores();
+}
+
+function moverGhost(body) {
+    ghost = document.getElementById(ghost + body.id);
+    ghost.style.top = body.posY + "px";
+    ghost.style.left = body.posX + "px";
+    if(body.dirrection==="U"){
+        ghost.src='img/actors/ghost/'+name+'/up-2.png';
+    }else if(body.dirrection==="D"){
+        ghost.src='img/actors/ghost/'+name+'/down-2.png';
+    }else if(body.dirrection==="L"){
+        ghost.src='img/actors/ghost/'+name+'/left-2.png';
+    }else{
+        ghost.src='img/actors/ghost/'+name+'/right-2.png';
     }
     updatePlayers(body);
     scores();

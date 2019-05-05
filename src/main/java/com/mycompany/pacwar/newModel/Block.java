@@ -1,5 +1,7 @@
 package com.mycompany.pacwar.newModel;
 
+
+
 public class Block extends Element implements BackGroundItem{
 
     public int size = BackGroundItem.getSize();
@@ -19,6 +21,20 @@ public class Block extends Element implements BackGroundItem{
             if(colision(pacMan.posX+PacMan.velocity,pacMan.posY,pacMan.posX+PacMan.size+PacMan.velocity,pacMan.posY+PacMan.size,posX,posY,posX+size,posY+size) ) move = false;
         }else{//DOWN
             if( colision(pacMan.posX,pacMan.posY+PacMan.velocity,pacMan.posX+PacMan.size,pacMan.posY+PacMan.size+PacMan.velocity,posX,posY,posX+size,posY+size)) move = false;
+        }
+        return move;
+    }
+    
+    public boolean doesMove(GHost ghost, int key) {
+        boolean move = true;
+        if(key == 37 ){//LEFT
+            if(colision(ghost.posX-ghost.velocity,ghost.posY,ghost.posX+ghost.size-ghost.velocity,ghost.posY+ghost.size,posX,posY,posX+size,posY+size)) move = false;
+        }else if(key == 38){//UP
+            if(colision(ghost.posX,ghost.posY-ghost.velocity,ghost.posX+ghost.size,ghost.posY+ghost.size-ghost.velocity,posX,posY,posX+size,posY+size) ) move = false;
+        }else if(key ==39){//RIGHT
+            if(colision(ghost.posX+ghost.velocity,ghost.posY,ghost.posX+ghost.size+ghost.velocity,ghost.posY+ghost.size,posX,posY,posX+size,posY+size) ) move = false;
+        }else{//DOWN
+            if( colision(ghost.posX,ghost.posY+ghost.velocity,ghost.posX+ghost.size,ghost.posY+ghost.size+ghost.velocity,posX,posY,posX+size,posY+size)) move = false;
         }
         return move;
     }
