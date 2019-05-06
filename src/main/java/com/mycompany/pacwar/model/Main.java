@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.pacwar.model;
+/*package com.mycompany.pacwar.model;
 
 import com.mycompany.pacwar.model.level.Board;
 import javax.swing.JFrame;
@@ -16,7 +16,7 @@ public class Main extends JFrame {
      * un objeto Board (hijo de JPanel).
      *
      */
-    public Main() {
+    /*public Main() {
         add(new Board());
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -31,4 +31,4 @@ public class Main extends JFrame {
         new Main();
 
     }
-}
+}*/
