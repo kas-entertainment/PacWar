@@ -1,4 +1,4 @@
-**PacWar(BackEnd-FrontEnd)**
+﻿**PacWar(BackEnd-FrontEnd)**
 ======
 *Proyecto desarrollado en el periodo académico 2019-1 por KAS-Entertainment para el curso Arquitecturas de Software (ARSW)*
 
@@ -80,6 +80,8 @@ Have an application as competent as possible in the market, be the best in the i
 
 ![](statistics.png)
 
+![](GameRoom.PNG)
+
 
 # Board elements
 - Player: its function is to take all the possible points, at the same time hide from the ghosts, defend against the opponents and attack the other players to be the only player on the board and win.
@@ -157,6 +159,19 @@ This application needs installed:
 # Class Diagram
 
 ![Alt text](diagrama.jpeg)
+
+
+# Heroku Link
+
+https://polar-harbor-18202.herokuapp.com/index.html
+
+# Data Base
+
+![Alt text](DiagramaBd.png)
+
+# Diagram develop
+
+![Alt text](Despliegue.PNG)
 
 # Team names
 - Karen Tatiana Mora Merchán - Developer FrontEnd
