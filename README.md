@@ -80,6 +80,8 @@ Have an application as competent as possible in the market, be the best in the i
 
 ![](statistics.png)
 
+![](selec.png)
+
 ![](GameRoom.PNG)
 
 
