@@ -1,10 +1,16 @@
 start();
-
+//12020 
 var players = [];
-var character="pacman";
 
-function inicial(character) {
+function getCharacter(character){
+alert("the character is "+character);
+}
+
+
+function inicial() {
+
     if(character.equals("pacman")){
+        alert("Entro pcm");
         createPacMan()
             .then(function (value) {
                 getPacMans()
