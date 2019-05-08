@@ -178,4 +178,3 @@ https://polar-harbor-18202.herokuapp.com/index.html
 # Team names
 - Karen Tatiana Mora Merchán - Developer FrontEnd
 - Sergio Alejandro Peña Pinto - Developer BackEnd
-- Andrés Rodríguez del Toro - Developer BackEnd
