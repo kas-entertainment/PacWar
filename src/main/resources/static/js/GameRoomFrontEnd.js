@@ -1,82 +1,57 @@
+function getCharacter(character){
+alert("the sahjdkasjh is "+character);
+char=character;
+}
 start();
-//12020 
+
 var players = [];
 
-function getCharacter(character){
-alert("the character is "+character);
-}
 
 
 function inicial() {
-
-    if(character.equals("pacman")){
-        alert("Entro pcm");
+    alert("2. HOLA");
+    //var char="pacman";
+    var char="blue";
+    alert("3. "+char);
+   
+    if(char==="pacman"){
+        alert("4. Entro pcm /GameRoomFrontEnd");
         createPacMan()
             .then(function (value) {
+                alert("6. Entro a get /GameRoomFrontEnd");
                 getPacMans()
                 .then(function (response) {
+                    alert("7. Entro a put /GameRoomFrontEnd");
                     putPacMans(response.data);
                 }
                 )
             }
             );
     }
-    
-    if(character.equals("blue")){
+    if(char==="blue"){
+        alert("4F. Entro a blue --->FANTASMA /GameRoomFrontEnd");
         createGhost()
-            .then(function (value) {
-                getGhosts()
+        .then(function (value) {
+            alert("6F. "+sol);
+            getGhosts()
                 .then(function (response) {
-                    putGhostList(response.data,character);
+                    alert("7F. "+sol);
+                    putGhostList(response.data);
                 }
                 )
             }
             );
-    }
-    
-    if(character.equals("orange")){
-        createGhost()
-            .then(function (value) {
-                getGhosts()
-                .then(function (response) {
-                    putGhostList(response.data,character);
-                }
-                )
-            }
-            );
-    }
-    
-    if(character.equals("pink")){
-        createGhost()
-            .then(function (value) {
-                getGhosts()
-                .then(function (response) {
-                    putGhostList(response.data,character);
-                }
-                )
-            }
-            );
-    }
-    if(character.equals("red")){
-        createGhost()
-            .then(function (value) {
-                getGhosts()
-                .then(function (response) {
-                    putGhostList(response.data,character);
-                }
-                )
-            }
-            );
+        alert("salio --->FANTASMA /GameRoomFrontEnd"+num);
     }
 }
 
 function start(){
     connectAndSuscribe();
-    inicial();
     getBackGroundItems()
         .then(function (response) {
             putBackGroundItems(response.data)
         });
+    inicial();
 }
 
 function putBackGroundItems(list) {
@@ -101,14 +76,16 @@ function deleteDot(dot) {
 }
 
 function putPacMans(list){
+    alert("8. putPacMans PAC-MAN /GameRoomFrontEnd");
     for(var i = 0; i<list.length;i++){
         putPacMan(list[i])
     }
 }
 
-function putGhostList(list,name){
+function putGhostList(list){
+    alert("8G. putGhostList --->FANTASMA /GameRoomFrontEnd");
     for(var i = 0; i<list.length;i++){
-        putGhost(list[i],name)
+        putGhost(list[i])
     }
 }
 
@@ -125,6 +102,7 @@ function scores(){
 }
 
 function putPacMan(pacman) {
+    alert("9. putPacMan PAC-MAN LO DE LA IMAGEN /GameRoomFrontEnd");
     players.push(pacman);
     agregar = "<img id='pacman"+pacman.id+"' style='position:absolute; width:"+pacman.size+"px; height:"+pacman.size+"px; top:"+pacman.posY+"px; left:"+pacman.posX+"px'";
     if(pacman.dirrection=="U"){
@@ -139,23 +117,26 @@ function putPacMan(pacman) {
     document.getElementById("game").innerHTML += agregar;
 }
 
-function putGhost(ghost,name) {
+function putGhost(ghost) {
+    alert("9G. putGhost--->FANTASMA LO DE LA IMAGEN /GameRoomFrontEnd");
     players.push(ghost);
     agregar="<img id='pacman"+ghost.id+"' style='position:absolute; width:"+ghost.size+"px; height:"+ghost.size+"px; top:"+ghost.posY+"px; left:"+ghost.posX+"px'";
     
-    if(pacman.dirrection=="U"){
-            agregar += "src/main/resources/static/img/actors/ghost/" + name + "/" + "up-1.png";
-            agregar += "src/main/resources/static/img/actors/ghost/" + name + "/" + "up-2.png";
-    }else if(pacman.dirrection=="D"){
-            agregar += "src/main/resources/static/img/actors/ghost/" + name + "/" + "down-1.png";
-            agregar += "src/main/resources/static/img/actors/ghost/" + name + "/" + "down-2.png";
-    }else if(pacman.dirrection=="L"){
-            agregar += "src/main/resources/static/img/actors/ghost/" + name + "/" + "left-1.png";
-            agregar += "src/main/resources/static/img/actors/ghost/" + name + "/" + "left-2.png";
+    if(ghost.dirrection=="U"){
+            agregar += "src/main/resources/static/img/actors/ghost/" + "blue" + "/" + "up-1.png";
+            agregar += "src/main/resources/static/img/actors/ghost/" + "blue" + "/" + "up-2.png";
+    }else if(ghost.dirrection=="D"){
+            agregar += "src/main/resources/static/img/actors/ghost/" + "blue" + "/" + "down-1.png";
+            agregar += "src/main/resources/static/img/actors/ghost/" + "blue" + "/" + "down-2.png";
+    }else if(ghost.dirrection=="L"){
+            agregar += "src/main/resources/static/img/actors/ghost/" + "blue" + "/" + "left-1.png";
+            agregar += "src/main/resources/static/img/actors/ghost/" + "blue" + "/" + "left-2.png";
     }else{
-            agregar += "src/main/resources/static/img/actors/ghost/" + name + "/" + "right-1.png";
-            agregar += "src/main/resources/static/img/actors/ghost/" + name + "/" + "right-2.png";
+            agregar += "src/main/resources/static/img/actors/ghost/" + "blue" + "/" + "right-1.png";
+            agregar += "src/main/resources/static/img/actors/ghost/" + "blue" + "/" + "right-2.png";
     }
+    alert("agregar IMAGEN /GameRoomFrontEnd");
+    alert(agregar);
     document.getElementById("game").innerHTML += agregar;
 }
 
@@ -166,6 +147,7 @@ window.onkeydown = function (e) {
 };
 
 function moverPacMan(body) {
+    //alert("10. moverPacMan /GameRoomFrontEnd");
     pacman = document.getElementById("pacman"+body.id);
     pacman.style.top = body.posY + "px";
     pacman.style.left = body.posX + "px";
@@ -183,17 +165,18 @@ function moverPacMan(body) {
 }
 
 function moverGhost(body) {
+    //alert("10G. moverGhost--->FANTASMA /GameRoomFrontEnd");
     ghost = document.getElementById(ghost + body.id);
     ghost.style.top = body.posY + "px";
     ghost.style.left = body.posX + "px";
     if(body.dirrection==="U"){
-        ghost.src='img/actors/ghost/'+name+'/up-2.png';
+        ghost.src='img/actors/ghost/'+'blue'+'/up-2.png';
     }else if(body.dirrection==="D"){
-        ghost.src='img/actors/ghost/'+name+'/down-2.png';
+        ghost.src='img/actors/ghost/'+'blue'+'/down-2.png';
     }else if(body.dirrection==="L"){
-        ghost.src='img/actors/ghost/'+name+'/left-2.png';
+        ghost.src='img/actors/ghost/'+'blue'+'/left-2.png';
     }else{
-        ghost.src='img/actors/ghost/'+name+'/right-2.png';
+        ghost.src='img/actors/ghost/'+'blue'+'/right-2.png';
     }
     updatePlayers(body);
     scores();

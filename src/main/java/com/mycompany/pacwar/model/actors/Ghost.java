@@ -42,6 +42,16 @@ public class Ghost extends Movable {
         this.collides_with = new ArrayList<String>();
         loadImageSet();
     }
+    
+    public Ghost(int x, int y, int size) {
+        super(x, y);
+        System.out.println("Entro a un constructor de Ghost clase Ghost");
+        setSize(size);
+        anim_manager = new AnimationManager();
+        loadImageSet();
+
+    }
+    
 
     public String getID() {
         return id;
@@ -133,7 +143,7 @@ public class Ghost extends Movable {
         anim_manager = new AnimationManager();
         try {
 
-            String[] anim = new String[2];
+            String[] anim = new String[2];            
             anim[0] = getImageSetFolder() + "up-1.png";
             anim[1] = getImageSetFolder() + "up-2.png";
 
@@ -153,17 +163,6 @@ public class Ghost extends Movable {
             anim[1] = getImageSetFolder() + "right-2.png";
 
             anim_manager.addAnimation("right", 200, 0, anim);
-
-            anim[0] = getImageSetFolder("scary") + "scary-1.png";
-            anim[1] = getImageSetFolder("scary") + "scary-2.png";
-
-            anim_manager.addAnimation("scary", 200, 0, anim);
-
-            anim = new String[1];
-            anim[0] = getImageSetFolder("dead") + "dead.png";
-
-            anim_manager.addAnimation("dead", 1000, 0, anim);
-
         } catch (FileNotFoundException e) {
 
             e.printStackTrace();
@@ -172,12 +171,13 @@ public class Ghost extends Movable {
     }
 
     private String getImageSetFolder() {
-        return "src/main/resources/static/img/actors/ghost/" + imageset + "/";
+        return "src/main/resources/static/img/actors/ghost/" + "blue" + "/";
     }
-
+    
+    /**
     private String getImageSetFolder(String other_imageset) {
         return "src/main/resources/static/img/actors/ghost/" + other_imageset + "/";
-    }
+    }*/
 
     public Image getImage() {
         switch (state) {
@@ -213,5 +213,10 @@ public class Ghost extends Movable {
 
     public String getName() {
         return name;
+    }
+    
+    public void setSize(int size) {
+        width = (int) (((long) size) * 0.90);
+        height = (int) (((long) size) * 0.90);
     }
 }

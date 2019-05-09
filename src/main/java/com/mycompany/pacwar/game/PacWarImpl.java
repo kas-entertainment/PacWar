@@ -61,21 +61,29 @@ public class PacWarImpl implements PacWar{
     public int getNextTeam(int roomId) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
-
-    @Override
-    public void registerPlayerToRoom(int roomId, Pacman pacman, Ghost gost, int team) throws PacWarException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void removePlayerToRoom(int roomId, Pacman pacman, Ghost gost, int team) throws PacWarException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     @Override
     public Ghost getGhost(String username, int roomId, int team) throws PacWarException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void registerPlayerToRoom(int roomId, Pacman pacman, int team) throws PacWarException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void removePlayerToRoom(int roomId, Pacman pacman, int team) throws PacWarException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void registerPlayerToRoom(int roomId, Ghost ghost, int team) throws PacWarException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void removePlayerToRoom(int roomId, Ghost ghost, int team) throws PacWarException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

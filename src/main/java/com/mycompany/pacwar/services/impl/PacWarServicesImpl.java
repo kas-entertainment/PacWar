@@ -57,11 +57,13 @@ public class PacWarServicesImpl implements PacWarServices {
 
     @Override
     public ArrayList<PacMan> getPacMans(int room) {
+        System.out.println("getPacMans PacWarServicesImpl");
         return main.getRoom(room).getPacmans();
     }
     
     @Override
-    public ArrayList<GHost> getGhosts(int room, String name) {
+    public ArrayList<GHost> getGhosts(int room) {
+        System.out.println("getGhosts PacWarServicesImpl");
         return main.getRoom(room).getGHost();
     }
     
@@ -77,11 +79,13 @@ public class PacWarServicesImpl implements PacWarServices {
 
     @Override
     public PacMan addPacMan(int roomId, PacMan pacMan) {
+        System.out.println("addPacMan PacWarServicesImpl");
         return main.getRoom(roomId).addPacMan(pacMan);
     }
 
     @Override
-    public GHost addGhost(int roomId, GHost ghost, String name) {
+    public GHost addGhost(int roomId, GHost ghost) {
+        System.out.println("addGhost PacWarServicesImpl");
         return main.getRoom(roomId).addGHost(ghost);
     }
     
@@ -92,6 +96,7 @@ public class PacWarServicesImpl implements PacWarServices {
 
     @Override
     public void movePacMan(String id, int key, int room) {
+        System.out.println("movePacMan PacWarServicesImpl");
         pwmc.sendMovementPacMan(main.movePacMan(id, key, room),room);
     }
 
@@ -102,6 +107,7 @@ public class PacWarServicesImpl implements PacWarServices {
 
     @Override
     public void moveGhost(String id, int key, int room) {
+        System.out.println("6G. moveGhost PacWarServicesImpl");
         pwmc.sendMovementGhost(main.moveGHost(id, key, room),room);
     }
     

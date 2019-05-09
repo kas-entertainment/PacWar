@@ -24,4 +24,5 @@ function getRooms() {
 function toRoom(id) {
     sessionStorage.setItem("room",id);
     window.location.href = 'gameRoom.html'
+    
 }

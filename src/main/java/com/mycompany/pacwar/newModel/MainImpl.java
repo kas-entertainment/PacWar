@@ -47,7 +47,19 @@ public class MainImpl implements Main{
         }
         return pacMan;
     }
-
+    
+    @Override
+    public GHost moveGHost(String id, int key, int idRoom) {
+        GHost ghost = null;
+        for(Room r:rooms){
+            if(r.getIdRoom()==idRoom){
+                ghost = r.moveGHost(id,key);
+                break;
+            }
+        }
+        return ghost;
+    }
+    
     @Override
     public ArrayList<BackGroundItem> getBackGroundItems(int idRoom) {
         ArrayList<BackGroundItem> backGroundItems = null;
@@ -63,18 +75,6 @@ public class MainImpl implements Main{
     @Override
     public void eliminateDot(Dot dot, int idRoom) {
         pwmc.sendDeleteDot(dot,idRoom);
-    }
-
-    @Override
-    public GHost moveGHost(String id, int key, int idRoom) {
-        GHost ghost = null;
-        for(Room r:rooms){
-            if(r.getIdRoom()==idRoom){
-                ghost = r.moveGHost(id,key);
-                break;
-            }
-        }
-        return ghost;
     }
 
 }

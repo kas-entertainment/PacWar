@@ -34,6 +34,7 @@ public class Board extends JPanel implements ActionListener {
     private Timer timer;
     private Level level;
     private Pacman player;
+    private Ghost player2;
     private HUD hud;
     private ArrayList<Ghost> ghosts;
     private Font text_font;
@@ -69,18 +70,19 @@ public class Board extends JPanel implements ActionListener {
 
         level = new LevelLoader().LoadLevel(1);
 
-        loadGhosts();
+        //loadGhosts();
 
         int[] player_pos = level.getPlayerInitialPosition();
 
         player = new Pacman(player_pos[0], player_pos[1], gameconfig.getLevelBoxSize());
+        player2 = new Ghost(player_pos[0], player_pos[1], gameconfig.getLevelBoxSize());
 
         hud.resetScore();
 
     }
 
     private void loadGhosts() {
-
+        System.out.println("loadGhosts() BOARD");
         ghosts = new ArrayList<Ghost>();
         String[] ghosts_in_level = level.getGhostsInLevel();
         for (String s : ghosts_in_level) {
@@ -327,6 +329,13 @@ public class Board extends JPanel implements ActionListener {
         }
 
         if (actor instanceof Pacman) {
+            if (actor.isNextDirectionOppositeToActual()) {
+                if (nextCellIsNavigable(actor_position, next_direction)) {
+                    return true;
+                }
+            }
+        }
+        if (actor instanceof Ghost) {
             if (actor.isNextDirectionOppositeToActual()) {
                 if (nextCellIsNavigable(actor_position, next_direction)) {
                     return true;

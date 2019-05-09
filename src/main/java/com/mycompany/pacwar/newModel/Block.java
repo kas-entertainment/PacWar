@@ -26,15 +26,16 @@ public class Block extends Element implements BackGroundItem{
     }
     
     public boolean doesMove(GHost ghost, int key) {
+        System.out.println("doesMove() BLOCK");
         boolean move = true;
         if(key == 37 ){//LEFT
-            if(colision(ghost.posX-ghost.velocity,ghost.posY,ghost.posX+ghost.size-ghost.velocity,ghost.posY+ghost.size,posX,posY,posX+size,posY+size)) move = false;
+            if(colision(ghost.posX-GHost.velocity,ghost.posY,ghost.posX+GHost.size-GHost.velocity,ghost.posY+GHost.size,posX,posY,posX+size,posY+size)) move = false;
         }else if(key == 38){//UP
-            if(colision(ghost.posX,ghost.posY-ghost.velocity,ghost.posX+ghost.size,ghost.posY+ghost.size-ghost.velocity,posX,posY,posX+size,posY+size) ) move = false;
+            if(colision(ghost.posX,ghost.posY-GHost.velocity,ghost.posX+GHost.size,ghost.posY+GHost.size-GHost.velocity,posX,posY,posX+size,posY+size) ) move = false;
         }else if(key ==39){//RIGHT
-            if(colision(ghost.posX+ghost.velocity,ghost.posY,ghost.posX+ghost.size+ghost.velocity,ghost.posY+ghost.size,posX,posY,posX+size,posY+size) ) move = false;
+            if(colision(ghost.posX+GHost.velocity,ghost.posY,ghost.posX+GHost.size+GHost.velocity,ghost.posY+GHost.size,posX,posY,posX+size,posY+size) ) move = false;
         }else{//DOWN
-            if( colision(ghost.posX,ghost.posY+ghost.velocity,ghost.posX+ghost.size,ghost.posY+ghost.size+ghost.velocity,posX,posY,posX+size,posY+size)) move = false;
+            if( colision(ghost.posX,ghost.posY+GHost.velocity,ghost.posX+GHost.size,ghost.posY+GHost.size+GHost.velocity,posX,posY,posX+size,posY+size)) move = false;
         }
         return move;
     }

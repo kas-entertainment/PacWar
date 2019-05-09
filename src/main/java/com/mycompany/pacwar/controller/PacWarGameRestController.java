@@ -49,42 +49,54 @@ public class PacWarGameRestController {
 
     @RequestMapping(method = RequestMethod.POST, value="/{roomId}/pacman")
     public ResponseEntity<?> createPacMan(@PathVariable(name = "roomId")int roomId, @RequestBody PacMan pacMan){
+        System.out.println("1C. createPacMan PacWarGameRestController");
         try{
             pwmc.newPacMan(pacwarServices.addPacMan(roomId,pacMan),roomId);
+            System.out.println("2C. ENTRO AL TRY createPacMan PacWarGameRestController");
             return new ResponseEntity<>(HttpStatus.ACCEPTED);
         }catch(Exception ex){
             Logger.getLogger(PacWarAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("2C. NTRO AL catch createPacMan PacWarGameRestController");
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.BAD_REQUEST);
         }
     }
     
     @RequestMapping(method = RequestMethod.POST, value="/{roomId}/ghost")
-    public ResponseEntity<?> createGhost(@PathVariable(name = "roomId")int roomId, @RequestBody GHost ghost, String name){
+    public ResponseEntity<?> createGhost(@PathVariable(name = "roomId")int roomId, @RequestBody GHost ghost){
+        System.out.println("createGhost PacWarGameRestController");
         try{
-            pwmc.newGhost(pacwarServices.addGhost(roomId, ghost, name), roomId, name);
+            pwmc.newGhost(pacwarServices.addGhost(roomId, ghost), roomId);
+            System.out.println("ENTRO AL TRY createGhost PacWarGameRestController");
             return new ResponseEntity<>(HttpStatus.ACCEPTED);
         }catch(Exception ex){
             Logger.getLogger(PacWarAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("ENTRO AL catch createGhost PacWarGameRestController");
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.BAD_REQUEST);
         }
     }
 
     @RequestMapping(method = RequestMethod.GET, value="/{roomId}/pacmans")
     public ResponseEntity<?> getPacMans(@PathVariable(name = "roomId")int roomId){
+        System.out.println("3C. getPacMans PacWarGameRestController");
         try{
+            System.out.println("4C. try getPacMans PacWarGameRestController");
             return new ResponseEntity<>(pacwarServices.getPacMans(roomId),HttpStatus.ACCEPTED);
         }catch(Exception ex){
             Logger.getLogger(PacWarAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("4C. catch getPacMans PacWarGameRestController");
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.BAD_REQUEST);
         }
     }
 
     @RequestMapping(method = RequestMethod.GET, value="/{roomId}/ghosts")
-    public ResponseEntity<?> getGhosts(@PathVariable(name = "roomId")int roomId,String name){
+    public ResponseEntity<?> getGhosts(@PathVariable(name = "roomId")int roomId){
+        System.out.println("GetGhost PacWarGameRestController");
         try{
-            return new ResponseEntity<>(pacwarServices.getGhosts(roomId,name),HttpStatus.ACCEPTED);
+            System.out.println("Entro al try GetGhost PacWarGameRestController");
+            return new ResponseEntity<>(pacwarServices.getGhosts(roomId),HttpStatus.ACCEPTED);
         }catch(Exception ex){
             Logger.getLogger(PacWarAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Entro al catch GetGhost PacWarGameRestController");
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.BAD_REQUEST);
         }
     }

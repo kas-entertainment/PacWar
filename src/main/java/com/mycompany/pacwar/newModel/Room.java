@@ -1,6 +1,6 @@
 package com.mycompany.pacwar.newModel;
 
-import com.mycompany.pacwar.model.actors.Ghost;
+
 import java.util.ArrayList;
 
 public class Room {

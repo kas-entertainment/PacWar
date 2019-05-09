@@ -29,12 +29,14 @@ public class PacWarMessageController {
 
     @MessageMapping("/newpacman.{room}")
     public void newPacMan(PacMan pacMan,@DestinationVariable int room){
+        System.out.println("1.1C. newPacMan PacWarMessageController");
         smt.convertAndSend("/topic/newpacman."+room, pacMan);
     }
     
     @MessageMapping("/newghost.{room}")
-    public void newGhost(GHost ghost,@DestinationVariable int room, String name){
-        smt.convertAndSend("/topic/newpacman."+room, ghost);
+    public void newGhost(GHost ghost,@DestinationVariable int room){
+        System.out.println("1.1G. newghost PacWarMessageController");
+        smt.convertAndSend("/topic/newghost."+room, ghost);
     }
     
             
@@ -53,6 +55,7 @@ public class PacWarMessageController {
     
 
     public void sendMovementPacMan(PacMan pacMan, int room){
+        System.out.println("5C. sendMovementPacMan PacWarMessageController");
         smt.convertAndSend("/topic/move."+room,pacMan);
     }
 
@@ -61,7 +64,8 @@ public class PacWarMessageController {
     }
 
     public void sendMovementGhost(GHost moveGHost, int room) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("7G. sendMovementGhost PacWarMessageController");
+        smt.convertAndSend("/topic/move."+room,moveGHost);
     }
 
     static class Move{

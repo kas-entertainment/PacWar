@@ -22,22 +22,19 @@ public interface PacWarServices {
     void logIn(String nickname, String password);
 
     ArrayList<PacMan> getPacMans(int room);
-    
-    ArrayList<GHost> getGhosts(int room,String name);
+    ArrayList<GHost> getGhosts(int room);
     
     ArrayList<Room> getRooms();
 
     Room getRoom(int id);
 
     PacMan addPacMan(int roomId, PacMan pacMan);
+    GHost addGhost(int roomId, GHost ghost);
 
     void addRoom(int id);
 
     void movePacMan(String id, int key, int room);
+    void moveGhost(String id, int key, int room);
 
     ArrayList<BackGroundItem> getBackGroundItemByRoomId(int idRoom);
-
-    public void moveGhost(String id, int key, int room);
-
-    public GHost addGhost(int roomId, GHost ghost, String name);
 }

@@ -18,8 +18,12 @@ public interface PacWar {
     void removeRoom(int roomid) throws PacWarException;
     //void registerPlayerToRoom(int roomId, Pacman pacman, int team) throws PacWarException;
     //void removePlayerToRoom(int roomId, Pacman pacman, int team) throws PacWarException;
-    void registerPlayerToRoom(int roomId, Pacman pacman, Ghost gost,int team) throws PacWarException;
-    void removePlayerToRoom(int roomId, Pacman pacman, Ghost gost,int team) throws PacWarException;
+    void registerPlayerToRoom(int roomId, Pacman pacman,int team) throws PacWarException;
+    void removePlayerToRoom(int roomId, Pacman pacman,int team) throws PacWarException;
+    
+    void registerPlayerToRoom(int roomId, Ghost ghost,int team) throws PacWarException;
+    void removePlayerToRoom(int roomId, Ghost ghost,int team) throws PacWarException;
+    
     HashMap<Integer, Battle> getRoomsMap();
     public Pacman getPacman(String username,int roomId,int team)throws PacWarException;
     public Ghost getGhost(String username,int roomId,int team)throws PacWarException;

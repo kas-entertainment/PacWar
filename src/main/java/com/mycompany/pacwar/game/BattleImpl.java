@@ -111,5 +111,15 @@ public class BattleImpl extends Thread implements Battle{
     public void moveGhost(String username, int key) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public void insertPlayerToTeam(Ghost ghost, int team) throws BattleException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void removePlayerToTeam(Ghost ghost, int team) throws BattleException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
