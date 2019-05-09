@@ -29,7 +29,7 @@ public class PacWarMessageController {
 
     @MessageMapping("/newpacman.{room}")
     public void newPacMan(PacMan pacMan,@DestinationVariable int room){
-        System.out.println("1.1C. newPacMan PacWarMessageController");
+        //System.out.println("1.1C. newPacMan PacWarMessageController");
         smt.convertAndSend("/topic/newpacman."+room, pacMan);
     }
     
@@ -55,7 +55,7 @@ public class PacWarMessageController {
     
 
     public void sendMovementPacMan(PacMan pacMan, int room){
-        System.out.println("5C. sendMovementPacMan PacWarMessageController");
+        //System.out.println("5C. sendMovementPacMan PacWarMessageController");
         smt.convertAndSend("/topic/move."+room,pacMan);
     }
 

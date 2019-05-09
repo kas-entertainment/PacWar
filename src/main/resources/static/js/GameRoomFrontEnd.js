@@ -5,23 +5,32 @@ char=character;
 start();
 
 var players = [];
-
+var charName=null;
 
 
 function inicial() {
     alert("2. HOLA");
+    
+    /**var i 
+    for (i=0;i<document.characters.chars.length;i++){ 
+        if (document.characters.chars[i].checked){
+            break;
+        }
+    }
+    alert("usted es"+ document.characters.chars[i].value);*/
+    
     //var char="pacman";
     var char="blue";
     alert("3. "+char);
    
     if(char==="pacman"){
-        alert("4. Entro pcm /GameRoomFrontEnd");
+        //alert("4. Entro pcm /GameRoomFrontEnd");
         createPacMan()
             .then(function (value) {
-                alert("6. Entro a get /GameRoomFrontEnd");
+                //alert("6. Entro a get /GameRoomFrontEnd");
                 getPacMans()
                 .then(function (response) {
-                    alert("7. Entro a put /GameRoomFrontEnd");
+                    //alert("7. Entro a put /GameRoomFrontEnd");
                     putPacMans(response.data);
                 }
                 )
@@ -32,7 +41,7 @@ function inicial() {
         alert("4F. Entro a blue --->FANTASMA /GameRoomFrontEnd");
         createGhost()
         .then(function (value) {
-            alert("6F. "+sol);
+            alert("6F. --->FANTASMA /GameRoomFrontEnd");
             getGhosts()
                 .then(function (response) {
                     alert("7F. "+sol);
@@ -51,7 +60,7 @@ function start(){
         .then(function (response) {
             putBackGroundItems(response.data)
         });
-    inicial();
+    inicial(charName);
 }
 
 function putBackGroundItems(list) {
@@ -76,7 +85,7 @@ function deleteDot(dot) {
 }
 
 function putPacMans(list){
-    alert("8. putPacMans PAC-MAN /GameRoomFrontEnd");
+    //alert("8. putPacMans PAC-MAN /GameRoomFrontEnd");
     for(var i = 0; i<list.length;i++){
         putPacMan(list[i])
     }
@@ -102,7 +111,7 @@ function scores(){
 }
 
 function putPacMan(pacman) {
-    alert("9. putPacMan PAC-MAN LO DE LA IMAGEN /GameRoomFrontEnd");
+    //alert("9. putPacMan PAC-MAN LO DE LA IMAGEN /GameRoomFrontEnd");
     players.push(pacman);
     agregar = "<img id='pacman"+pacman.id+"' style='position:absolute; width:"+pacman.size+"px; height:"+pacman.size+"px; top:"+pacman.posY+"px; left:"+pacman.posX+"px'";
     if(pacman.dirrection=="U"){
@@ -135,7 +144,7 @@ function putGhost(ghost) {
             agregar += "src/main/resources/static/img/actors/ghost/" + "blue" + "/" + "right-1.png";
             agregar += "src/main/resources/static/img/actors/ghost/" + "blue" + "/" + "right-2.png";
     }
-    alert("agregar IMAGEN /GameRoomFrontEnd");
+    //alert("agregar IMAGEN /GameRoomFrontEnd");
     alert(agregar);
     document.getElementById("game").innerHTML += agregar;
 }

@@ -101,7 +101,9 @@ public class Room {
         return pacmans;
     }
 
-    public ArrayList<GHost> getGHost() {
+    public ArrayList<GHost> getGhosts() {
+        System.out.println("getGhosts() Room");
+        System.out.println("getGhosts() Room  ---->>>>"+gHosts);
         return gHosts;
     }
     

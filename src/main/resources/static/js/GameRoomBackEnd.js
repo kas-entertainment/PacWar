@@ -6,7 +6,7 @@ function getBackGroundItems() {
 }
 
 function createPacMan() {
-    alert("5. Pcmn /GameROomBAckEnd");
+    //alert("5. Pcmn /GameROomBAckEnd");
     return axios.post("/pacwar/game/"+sessionStorage.getItem("room")+"/pacman/",{
         "id":sessionStorage.getItem("id"),
         "dirrection":"U"
@@ -22,12 +22,12 @@ function createGhost() {
 }
 
 function getPacMans(){
-    alert("getPacMans Pac-man/GameROomBAckEnd");
+    //alert("getPacMans Pac-man/GameROomBAckEnd");
     return axios.get("/pacwar/game/"+sessionStorage.getItem("room")+"/pacmans")
 }
 
 function getGhosts(){
-    alert("getGhosts--->FANTASMA/GameROomBAckEnd");
+    alert("7. getGhosts--->FANTASMA/GameROomBAckEnd");
     return axios.get("/pacwar/game/"+sessionStorage.getItem("room")+"/ghosts")
 }
 
@@ -41,20 +41,20 @@ function connectAndSuscribe() {
     stompClient = Stomp.over(socket);
     stompClient.connect({}, function(frame){
         stompClient.subscribe("/topic/move."+sessionStorage.getItem("room"),function(message){
-            alert("9. pacMan moverPacMan StompCLient connectAndSuscribe /GameROomBAckEnd");
+            //alert("9. pacMan moverPacMan StompCLient connectAndSuscribe /GameROomBAckEnd");
             moverPacMan(JSON.parse(message.body));
         });
         stompClient.subscribe("/topic/move."+sessionStorage.getItem("room"),function(message){
-            alert("9G. GHOST moverGhost StompCLient connectAndSuscribe /GameROomBAckEnd");
+            //alert("9G. GHOST moverGhost StompCLient connectAndSuscribe /GameROomBAckEnd");
             moverGhost(JSON.parse(message.body));
         });
         
         stompClient.subscribe("/topic/newpacman."+sessionStorage.getItem("room"), function (message) {
-            alert(" pacMan putPacMan StompCLient connectAndSuscribe /GameROomBAckEnd");
+            //alert(" pacMan putPacMan StompCLient connectAndSuscribe /GameROomBAckEnd");
             putPacMan(JSON.parse(message.body));
         });
         stompClient.subscribe("/topic/newghost."+sessionStorage.getItem("room"), function (message) {
-            alert(" GHOST putGhost StompCLient connectAndSuscribe /GameROomBAckEnd");
+            //alert(" GHOST putGhost StompCLient connectAndSuscribe /GameROomBAckEnd");
             putGhost()(JSON.parse(message.body));
         });
         
