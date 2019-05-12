@@ -9,6 +9,7 @@ function createRoom() {
         })
 }
 
+
 function getRooms() {
     axios.get("/pacwar/game/rooms")
         .then(function (response) {
@@ -23,4 +24,5 @@ function getRooms() {
 function toRoom(id) {
     sessionStorage.setItem("room",id);
     window.location.href = 'gameRoom.html'
+    
 }

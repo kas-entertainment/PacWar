@@ -1,17 +1,19 @@
 package com.mycompany.pacwar.newModel;
 
+
 import java.util.ArrayList;
 
 public class Room {
     private int idRoom;
     private ArrayList<PacMan> pacmans = new ArrayList<>();
-    public static int size = 15;
+    public static int width = 43;
+    public static int height = 23;
     private ArrayList<BackGroundItem> backGroundItems=new ArrayList<>();
     private Main main;
 
     public Room(){
-        for(int i = 0; i<size;i++){
-            for(int j = 0; j<size;j++){
+        for(int i = 0; i<width;i++){
+            for(int j = 0; j<height;j++){
                 int num = (int) (Math.random()*10)+1;
                 if(num==1){
                     Block b = new Block();
@@ -34,7 +36,9 @@ public class Room {
         pacmans.add(pacMan);
         return pacmans.get(pacmans.size()-1);
     }
-
+    
+    
+    
     public PacMan movePacMan(String id, int key){
         PacMan pacMan = null;
         for(PacMan p:pacmans){
@@ -46,7 +50,8 @@ public class Room {
         }
         return pacMan;
     }
-
+    
+    
     public void removeDot(Dot dot){
         main.eliminateDot(dot, idRoom);
     }
@@ -59,6 +64,7 @@ public class Room {
         }
         return move;
     }
+    
 
     public int getIdRoom() {
         return idRoom;
@@ -72,10 +78,11 @@ public class Room {
         return pacmans;
     }
 
+    
     public void setPacmans(ArrayList<PacMan> pacmans) {
         this.pacmans = pacmans;
     }
-
+    
     public ArrayList<BackGroundItem> getBackGroundItems() {
         return backGroundItems;
     }

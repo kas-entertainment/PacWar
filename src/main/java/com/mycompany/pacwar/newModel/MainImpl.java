@@ -47,7 +47,7 @@ public class MainImpl implements Main{
         }
         return pacMan;
     }
-
+    
     @Override
     public ArrayList<BackGroundItem> getBackGroundItems(int idRoom) {
         ArrayList<BackGroundItem> backGroundItems = null;

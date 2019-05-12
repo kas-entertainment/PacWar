@@ -12,7 +12,7 @@ import com.mycompany.pacwar.newModel.Main;
 import com.mycompany.pacwar.newModel.PacMan;
 import com.mycompany.pacwar.newModel.Room;
 import com.mycompany.pacwar.persistence.PacWarException;
-import com.mycompany.pacwar.persistence.PacWarPersistence;
+//import com.mycompany.pacwar.persistence.PacWarPersistence;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,8 +26,6 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class PacWarServicesImpl implements PacWarServices {
-    @Autowired
-    PacWarPersistence pacwarPersistence;
 
     @Autowired
     Main main;
@@ -35,30 +33,12 @@ public class PacWarServicesImpl implements PacWarServices {
     @Autowired
     PacWarMessageController pwmc;
     
-    public void addPlayer(String name, String lastName, String email, String nikName, String password){
-        pacwarPersistence.addPlayer(name, lastName, email, nikName,password);
-    }
-    public Jugador getJugadorByName(String nikName){
-        return pacwarPersistence.getJugadorByName(nikName);
-    }
-    
-    public List<Jugador> getAllGamers(){
-        return pacwarPersistence.getAllGamers();
-    }
-    
-    public List<Jugador> getGamersSameSesion(String idSala){
-        return pacwarPersistence.getGamersSameSesion(idSala);
-    }
-
-    public void logIn(String nickname, String password) {
-        pacwarPersistence.logIn(nickname,password);
-    }
-
     @Override
     public ArrayList<PacMan> getPacMans(int room) {
+        //System.out.println("getPacMans PacWarServicesImpl");
         return main.getRoom(room).getPacmans();
     }
-
+    
     @Override
     public ArrayList<Room> getRooms() {
         return main.getRooms();
@@ -71,9 +51,11 @@ public class PacWarServicesImpl implements PacWarServices {
 
     @Override
     public PacMan addPacMan(int roomId, PacMan pacMan) {
+        //System.out.println("addPacMan PacWarServicesImpl");
         return main.getRoom(roomId).addPacMan(pacMan);
     }
 
+    
     @Override
     public void addRoom(int id) {
         main.createRoom(id);
@@ -81,6 +63,7 @@ public class PacWarServicesImpl implements PacWarServices {
 
     @Override
     public void movePacMan(String id, int key, int room) {
+        //System.out.println("movePacMan PacWarServicesImpl");
         pwmc.sendMovementPacMan(main.movePacMan(id, key, room),room);
     }
 
@@ -88,6 +71,5 @@ public class PacWarServicesImpl implements PacWarServices {
     public ArrayList<BackGroundItem> getBackGroundItemByRoomId(int idRoom) {
         return main.getBackGroundItems(idRoom);
     }
-
 
 }

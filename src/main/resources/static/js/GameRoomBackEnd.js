@@ -6,7 +6,7 @@ function getBackGroundItems() {
 }
 
 function createPacMan() {
-    return axios.post("/pacwar/game/"+sessionStorage.getItem("room")+"/pacman",{
+    return axios.post("/pacwar/game/"+sessionStorage.getItem("room")+"/pacman/",{
         "id":sessionStorage.getItem("id"),
         "dirrection":"U"
     })
@@ -26,13 +26,16 @@ function connectAndSuscribe() {
     stompClient.connect({}, function(frame){
         stompClient.subscribe("/topic/move."+sessionStorage.getItem("room"),function(message){
             moverPacMan(JSON.parse(message.body));
+            moverGhost(JSON.parse(message.body));
         });
+        
         stompClient.subscribe("/topic/newpacman."+sessionStorage.getItem("room"), function (message) {
             putPacMan(JSON.parse(message.body));
+            putGhost(JSON.parse(message.body));
         });
         stompClient.subscribe("/topic/deletedot."+sessionStorage.getItem("room"),function (message) {
-            deleteDot(JSON.parse(message.body))
-        })
+            deleteDot(JSON.parse(message.body));
+        });
         //stompClient.send("/app/newpacman."+sessionStorage.getItem("room"),{},JSON.stringify({"id":sessionStorage.getItem("id"), "dirrection":"U"}));
     });
 

@@ -13,12 +13,68 @@
     <div id="rooms">
 
     </div>
+    
+    <h6 style="color: #ffffff">Sesion</h6>
     <button onclick="createRoom()" class="btn btn-outline-secondary my-2 my-sm-0" style="background-color: #5a6268; color: #ffffff">
         Create Room
     </button>
     <a href="perfil.html" onclick="logout()" class="btn btn-outline-secondary my-2 my-sm-0" style="background-color: #5a6268; color: #ffffff">Back</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    <form name="characters" method="GET" style="color: #ffffff; text-align: center" action="">
+        <div class="cc-selector" id= "character" style="text-align: center; color: #ffffff">
+            <br><br><br><br>
+            <h1 style="color: #ed969e">Choose a character</h1>
+            <br><br><br>
+            <!--input checked="checked" id="char" type="radio" name="pacman" value="pacman"/-->
+            <p>
+                <input id="charP" type="radio" name="chars" value="pacman" />
+                <label>
+                    <img src="/img/actors/pacman/right-2.png" class="img-responsive">
+                </label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="charB" type="radio" name="chars" value="blue" />
+                <label class="blue" for="blue">
+                    <img src="img/actors/ghost/blue/right-2.png" class="img-responsive">   
+                </label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="charO" type="radio" name="chars" value="orange" />
+                <label class="orange" for="orange">
+                    <img src="/img/actors/ghost/orange/right-2.png" class="img-responsive">   
+                </label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="charK" type="radio" name="chars" value="pink" />
+                <label class="pink" for="pink">
+                    <img src="/img/actors/ghost/pink/right-2.png" class="img-responsive">
+                </label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="charR" type="radio" name="chars" value="red" />
+                <label class="red" for="red">
+                    <img src="/img/actors/ghost/red/right-2.png" class="img-responsive">
+                </label>
+            </p>
+            <br>
+            <br>
+            <!--a onclick="aja()" class="btn btn-outline-secondary my-2 my-sm-0">Select</a-->
+            <input type="button" value="Select" id="comprobar_char" onclick="personaje()" class="btn btn-outline-secondary my-2 my-sm-0">
+        </div>
+    </form>
+    <script language='javaScript'> 
+        function personaje(){ 
+            var i 
+            for (i=0;i<document.characters.chars.length;i++){ 
+                if (document.characters.chars[i].checked){
+                    break;
+                }
+            }
+            start(document.characters.chars[i].value)
+            inicial(document.characters.chars[i].value);
+            //getCharacter(document.characters.chars[i].value);
+        }
+    </script>
+    
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="js/rooms.js"></script>
+<script src="js/GameRoomFrontEnd.js"></script>
 </html>

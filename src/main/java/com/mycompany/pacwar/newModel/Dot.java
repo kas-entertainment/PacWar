@@ -47,8 +47,7 @@ public class Dot extends Element implements BackGroundItem{
         }
         return true;
     }
-
-
+    
 
     @Override
     public String getType() {

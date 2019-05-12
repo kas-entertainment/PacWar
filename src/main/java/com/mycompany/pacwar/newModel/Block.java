@@ -1,5 +1,7 @@
 package com.mycompany.pacwar.newModel;
 
+
+
 public class Block extends Element implements BackGroundItem{
 
     public int size = BackGroundItem.getSize();
@@ -22,6 +24,7 @@ public class Block extends Element implements BackGroundItem{
         }
         return move;
     }
+    
 
     public static boolean colision(int x1, int y1, int x2, int y2,int xp1, int yp1, int xp2, int yp2){
         boolean col = false;

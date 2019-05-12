@@ -10,18 +10,9 @@ import java.util.List;
 
 public interface PacWarServices {
 
-    void addPlayer(String name, String lastName, String email, String nikName, String password);
-
-    Jugador getJugadorByName(String nikName);
-
-    List<Jugador> getAllGamers();
-
-    List<Jugador> getGamersSameSesion(String idSala);
-
-    void logIn(String nickname, String password);
 
     ArrayList<PacMan> getPacMans(int room);
-
+    
     ArrayList<Room> getRooms();
 
     Room getRoom(int id);

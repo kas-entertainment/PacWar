@@ -38,6 +38,7 @@ public class PacWarMessageController {
         smt.convertAndSend("/topic/deletedot."+room,dot);
     }
 
+
     static class Move{
         private String id;
         private int key;

@@ -14,7 +14,7 @@ public class PacMan extends Element{
 
     public static int size = 10;
 
-    public static int velocity = 10;
+    public static int velocity = 20;
 
     private Room room;
 
@@ -33,10 +33,10 @@ public class PacMan extends Element{
                 if (posY > 0) posY -= velocity;
                 dirrection = 'U';
             } else if (key == 39) {
-                if (posX < ((Room.size) * BackGroundItem.getSize())) posX += velocity;
+                if (posX < ((Room.width) * BackGroundItem.getSize())) posX += velocity;
                 dirrection = 'R';
             } else {
-                if (posY < ((Room.size) * BackGroundItem.getSize())) posY += velocity;
+                if (posY < ((Room.height) * BackGroundItem.getSize())) posY += velocity;
                 dirrection = 'D';
             }
         }
