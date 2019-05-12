@@ -1,17 +1,28 @@
-function getCharacter(character){
-alert("the sahjdkasjh is "+character);
-char=character;
-}
-start();
-
 var players = [];
 var charName=null;
+var character="";
+
+/**
+function getCharacter(charNm){
+character=character;
+}*/
+start();
 
 
 function inicial() {
-    //var char="pacman";
-    var char = "blue";
-    if (char === "pacman") {
+    //var character="pacman";
+    var paramstr = window.location.search.substr(1);
+    var paramarr = paramstr.split ("&");
+    var params = {};
+    for ( var i = 0; i < paramarr.length; i++) {
+        var tmparr = paramarr[i].split("=");
+        params[tmparr[0]] = tmparr[1];
+    }
+    character=params[tmparr[0]];
+    //alert("su personaje es  "+params[tmparr[0]]);
+    //alert("su personaje esssssss  "+character);
+    
+    if (character === "pacman") {
         createPacMan()
             .then(function (value) {
                 getPacMans()
@@ -22,7 +33,7 @@ function inicial() {
                 }
             );
     }
-    else if (char === "blue") {
+    else if(character === "blue" || character === "red"||character === "pink" || character === "orange"){
         createPacMan()
             .then(function (value) {
                 getPacMans()
@@ -93,13 +104,13 @@ function putPacMan(pacman) {
     players.push(pacman);
     agregar = "<img id='pacman"+pacman.id+"' style='position:absolute; width:"+pacman.size+"px; height:"+pacman.size+"px; top:"+pacman.posY+"px; left:"+pacman.posX+"px'";
     if(pacman.dirrection=="U"){
-        agregar += " src='img/actors/pacman/up-2.png'></img>"
+        agregar += " src='img/actors/'"+ character +"'/up-2.png'></img>"
     }else if(pacman.dirrection=="D"){
-        agregar += " src='img/actors/pacman/down-2.png'></img>"
+        agregar += " src='img/actors/'"+ character +"'/down-2.png'></img>"
     }else if(pacman.dirrection=="L"){
-        agregar += " src='img/actors/pacman/left-2.png'></img>"
+        agregar += " src='img/actors/'"+ character +"'/left-2.png'></img>"
     }else{
-        agregar += " src='img/actors/pacman/right-2.png'></img>"
+        agregar += " src='img/actors/'"+ character +"'/right-2.png'></img>"
     }
     document.getElementById("game").innerHTML += agregar;
 }
@@ -109,13 +120,13 @@ function putGhost(pacman) {
     agregar = "<img id='pacman" + pacman.id + "' style='position:absolute; width:" + pacman.size + "px; height:" + pacman.size + "px; top:" + pacman.posY + "px; left:" + pacman.posX + "px'";
 
     if (pacman.dirrection == "U") {
-        agregar += " src='img/actors/ghost/blue/up-1.png'></img>"
+        agregar += " src='img/actors/ghost/'"+ character +"'/up-1.png'></img>"
     } else if (pacman.dirrection == "D") {
-        agregar += " src='img/actors/ghost/blue/down-1.png'></img>"
+        agregar += " src='img/actors/ghost/'"+ character +"'/down-1.png'></img>"
     } else if (pacman.dirrection == "L") {
-        agregar += " src='img/actors/ghost/blue/left-1.png'></img>"
+        agregar += " src='img/actors/ghost/'"+ character +"'/left-1.png'></img>"
     } else {
-        agregar += " src='img/actors/ghost/blue/right-1.png'></img>"
+        agregar += " src='img/actors/ghost/'"+ character +"'/right-1.png'></img>"
     }
     document.getElementById("game").innerHTML += agregar;
 }
@@ -131,13 +142,13 @@ function moverPacMan(body) {
     pacman.style.top = body.posY + "px";
     pacman.style.left = body.posX + "px";
     if(body.dirrection==="U"){
-        pacman.src='img/actors/pacman/up-2.png';
+        pacman.src='img/actors/'+character+'/up-2.png';
     }else if(body.dirrection==="D"){
-        pacman.src='img/actors/pacman/down-2.png';
+        pacman.src='img/actors/'+character+'/down-2.png';
     }else if(body.dirrection==="L"){
-        pacman.src='img/actors/pacman/left-2.png';
+        pacman.src='img/actors/'+character+'/left-2.png';
     }else{
-        pacman.src='img/actors/pacman/right-2.png';
+        pacman.src='img/actors/'+character+'/right-2.png';
     }
     updatePlayers(body);
     scores();
@@ -148,13 +159,13 @@ function moverGhost(body) {
     ghost.style.top = body.posY + "px";
     ghost.style.left = body.posX + "px";
     if(body.dirrection==="U"){
-        ghost.src='img/actors/ghost/blue/up-1.png';
+        ghost.src='img/actors/ghost/'+character+'/up-1.png';
     }else if(body.dirrection==="D"){
-        ghost.src='img/actors/ghost/blue/down-1.png';
+        ghost.src='img/actors/ghost/'+character+'/down-1.png';
     }else if(body.dirrection==="L"){
-        ghost.src='img/actors/ghost/blue/left-1.png';
+        ghost.src='img/actors/ghost/'+character+'/left-1.png';
     }else{
-        ghost.src='img/actors/ghost/blue/right-1.png';
+        ghost.src='img/actors/ghost/'+character+'/right-1.png';
     }
     updatePlayers(body);
     scores();

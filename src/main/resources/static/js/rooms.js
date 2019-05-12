@@ -1,14 +1,27 @@
+var character="";
 getRooms();
 
 function createRoom() {
     var room = prompt("Which is the id of the room?");
-
     axios.post("/pacwar/game/newroom?id="+room)
         .then(function (value) {
             getRooms();
         })
 }
 
+
+function getCharRooms(){
+    var i;
+    for (i=0;i<document.characters.chars.length;i++){ 
+        if (document.characters.chars[i].checked){
+            break;
+        }
+    }
+    character=document.characters.chars[i].value;
+    getCharacter(character);
+    getRooms();
+    return character;
+}
 
 function getRooms() {
     axios.get("/pacwar/game/rooms")
@@ -23,6 +36,5 @@ function getRooms() {
 
 function toRoom(id) {
     sessionStorage.setItem("room",id);
-    window.location.href = 'gameRoom.html'
-    
+    window.location.href = 'gameRoom.html?num='+character;
 }
