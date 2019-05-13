@@ -15,4 +15,8 @@ public interface Main {
     ArrayList<BackGroundItem> getBackGroundItems(int idRoom);
 
     void eliminateDot(Dot dot, int idRoom);
+    
+    void eliminateHeart(Heart heart, int idRoom);
+    
+    void eliminateStar(Star star, int idRoom);
 }

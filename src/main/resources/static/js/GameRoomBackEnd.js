@@ -56,6 +56,12 @@ function connectAndSuscribe() {
         stompClient.subscribe("/topic/deletedot."+sessionStorage.getItem("room"),function (message) {
             deleteDot(JSON.parse(message.body));
         });
+        stompClient.subscribe("/topic/deleteheart."+sessionStorage.getItem("room"),function (message) {
+            deleteHeart(JSON.parse(message.body));
+        });
+        stompClient.subscribe("/topic/deletestar."+sessionStorage.getItem("room"),function (message) {
+            deleteStar(JSON.parse(message.body));
+        });
         //stompClient.send("/app/newpacman."+sessionStorage.getItem("room"),{},JSON.stringify({"id":sessionStorage.getItem("id"), "dirrection":"U"}));
     });
 

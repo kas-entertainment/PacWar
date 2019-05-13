@@ -61,10 +61,18 @@ function putBackGroundItems(list) {
         if(list[i].visible) {
             if (list[i].type === "Block") {
                 agregar += "<img style='position:absolute; width:" + list[i].size + "px; height:" + list[i].size + "px; top:" + list[i].posY + "px; left:" + list[i].posX + "px' src='img/block.png'></img>'";
-            } else {
+            }else if(list[i].type === "Dot"){
                 newY = list[i].posY + 7;
                 newX = list[i].posX + 7;
                 agregar += "<img id='" + list[i].id + "' style='position:absolute; top:" + newY + "px; left:" + newX + "px' src='img/pickups/dot.png'></img>'";
+            }else if(list[i].type === "Heart"){
+                newY = list[i].posY + 7;
+                newX = list[i].posX + 7;
+                agregar += "<img id='" + list[i].id + "' style='position:absolute; top:" + newY + "px; left:" + newX + "px' src='img/pickups/bigdot.png'></img>'";
+            }else if(list[i].type === "Star"){
+                newY = list[i].posY + 7;
+                newX = list[i].posX + 7;
+                agregar += "<img id='" + list[i].id + "' style='position:absolute; top:" + newY + "px; left:" + newX + "px' src='img/pickups/bigdot_old.png'></img>'";
             }
         }
     }
@@ -74,6 +82,16 @@ function putBackGroundItems(list) {
 function deleteDot(dot) {
     var dot1 = document.getElementById(dot.id);
     dot1.parentNode.removeChild(dot1);
+}
+
+function deleteHeart(heart) {
+    var heart1 = document.getElementById(heart.id);
+    heart1.parentNode.removeChild(heart1);
+}
+
+function deleteStar(star) {
+    var star1 = document.getElementById(star.id);
+    star1.parentNode.removeChild(star1);
 }
 
 function putPacMans(list){

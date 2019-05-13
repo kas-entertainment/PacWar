@@ -27,10 +27,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 
-/**
- *
- * @author karen
- */
 @RestController
 @RequestMapping("/pacwar")
 @Service

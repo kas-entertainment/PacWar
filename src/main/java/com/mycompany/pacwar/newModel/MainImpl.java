@@ -65,4 +65,14 @@ public class MainImpl implements Main{
         pwmc.sendDeleteDot(dot,idRoom);
     }
 
+    @Override
+    public void eliminateHeart(Heart heart, int idRoom) {
+        pwmc.sendDeleteHeart(heart,idRoom);
+    }
+
+    @Override
+    public void eliminateStar(Star star, int idRoom) {
+        pwmc.sendDeleteStar(star,idRoom);
+    }
+
 }

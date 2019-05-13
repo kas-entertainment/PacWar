@@ -1,7 +1,9 @@
 package com.mycompany.pacwar.controller;
 
 import com.mycompany.pacwar.newModel.Dot;
+import com.mycompany.pacwar.newModel.Heart;
 import com.mycompany.pacwar.newModel.PacMan;
+import com.mycompany.pacwar.newModel.Star;
 import com.mycompany.pacwar.services.PacWarServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
@@ -37,7 +39,14 @@ public class PacWarMessageController {
     public void sendDeleteDot(Dot dot, int room){
         smt.convertAndSend("/topic/deletedot."+room,dot);
     }
-
+    
+    public void sendDeleteHeart(Heart heart, int room){
+        smt.convertAndSend("/topic/deleteheart."+room,heart);
+    }
+    
+    public void sendDeleteStar(Star star, int room){
+        smt.convertAndSend("/topic/deletestar."+room,star);
+    }
 
     static class Move{
         private String id;

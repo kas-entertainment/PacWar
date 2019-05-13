@@ -19,6 +19,22 @@ public class PacMan extends Element{
     private Room room;
 
     private int points;
+    
+    private float health = 100;
+    
+    public void addVelocity(){
+        velocity+=10;
+    }
+    
+    public void addHealth(){
+        if(health<=80){
+            health+=20;
+        }
+    }
+    
+    public void subtractHealth(){
+        health-=20;
+    }
 
     public void addPoints(){
         points++;
@@ -76,5 +92,13 @@ public class PacMan extends Element{
 
     public void setPoints(int points) {
         this.points = points;
+    }
+    
+    public float getHealth() {
+        return health;
+    }
+
+    public void setHealth(float health) {
+        this.health = health;
     }
 }
