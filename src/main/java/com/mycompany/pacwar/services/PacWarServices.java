@@ -24,4 +24,7 @@ public interface PacWarServices {
     void movePacMan(String id, int key, int room);
 
     ArrayList<BackGroundItem> getBackGroundItemByRoomId(int idRoom);
+
+    public void removeRoom(int roomId);
+    
 }

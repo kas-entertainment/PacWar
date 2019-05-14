@@ -47,6 +47,16 @@ public class PacWarMessageController {
     public void sendDeleteStar(Star star, int room){
         smt.convertAndSend("/topic/deletestar."+room,star);
     }
+    
+    public void sendDeletePacMan(PacMan pacman, int room){
+        smt.convertAndSend("/topic/deletepacman."+room,pacman);
+    }
+
+    public void sendDeleteRoom(int room) {
+        smt.convertAndSend("/topic/deleteroom."+room,room);
+    }
+    
+    
 
     static class Move{
         private String id;

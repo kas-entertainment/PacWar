@@ -62,6 +62,9 @@ function connectAndSuscribe() {
         stompClient.subscribe("/topic/deletestar."+sessionStorage.getItem("room"),function (message) {
             deleteStar(JSON.parse(message.body));
         });
+        stompClient.subscribe("/topic/deletepacman."+sessionStorage.getItem("room"),function (message) {
+            deletePacMan(JSON.parse(message.body));
+        });
         //stompClient.send("/app/newpacman."+sessionStorage.getItem("room"),{},JSON.stringify({"id":sessionStorage.getItem("id"), "dirrection":"U"}));
     });
 

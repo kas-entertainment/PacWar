@@ -94,6 +94,11 @@ function deleteStar(star) {
     star1.parentNode.removeChild(star1);
 }
 
+function deletePacMan(pacman) {
+    var pacman1 = document.getElementById(pacman.id);
+    pacman1.parentNode.removeChild(pacman1);
+}
+
 function putPacMans(list){
     for(var i = 0; i<list.length;i++){
         putPacMan(list[i])
@@ -106,14 +111,15 @@ function putGhosts(list){
     }
 }
 
+async function gameOver(){
+
+
+}
+
 function scores(){
     agregar = "";
     for(var i = 0;i<players.length;i++){
-        if(document.getElementById("points"+players[i].id)!=null){
-            document.getElementById("points"+players[i].id).innerText = players[i].id+" Points: " + players[i].points
-        }else{
-            agregar+="<label id = 'points"+ players[i].id +"' style='position:absolute; top:"+300+"px; left:"+1750+"px; color:white'> "+players[i].id+" Points: "+players[i].points+"</label>"
-        }
+        agregar+="<label id = 'points"+ players[i].id +"' style='position:absolute; top:"+300+"px; left:"+1750+"px; color:white'> "+players[i].id+" Points: "+players[i].points+"</label>"
     }
     document.getElementById("game").innerHTML+=agregar;
 }

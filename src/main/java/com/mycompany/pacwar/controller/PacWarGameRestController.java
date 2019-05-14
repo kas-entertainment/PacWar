@@ -83,5 +83,7 @@ public class PacWarGameRestController {
         }
     }
 
-
+    public void endGame(int roomId){
+        pacwarServices.removeRoom(roomId);
+    }
 }

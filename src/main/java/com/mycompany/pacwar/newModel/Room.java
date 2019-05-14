@@ -50,7 +50,6 @@ public class Room {
     }
     
     
-    
     public PacMan movePacMan(String id, int key){
         PacMan pacMan = null;
         for(PacMan p:pacmans){
@@ -74,6 +73,12 @@ public class Room {
     public void removeDot(Dot dot){
         main.eliminateDot(dot, idRoom);
     }
+    
+    public void removePacMan(PacMan pacman){
+        if(pacman.isDead()){
+            main.eliminatePacMan(pacman, idRoom);
+        }
+    }
 
     public boolean canMove(PacMan pacMan, int key){
         boolean move = true;
@@ -84,7 +89,6 @@ public class Room {
         return move;
     }
     
-
     public int getIdRoom() {
         return idRoom;
     }
@@ -113,4 +117,5 @@ public class Room {
     public void setMain(Main main) {
         this.main = main;
     }
+    
 }

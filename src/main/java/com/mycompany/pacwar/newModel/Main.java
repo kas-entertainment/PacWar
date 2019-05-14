@@ -19,4 +19,11 @@ public interface Main {
     void eliminateHeart(Heart heart, int idRoom);
     
     void eliminateStar(Star star, int idRoom);
+    
+    void eliminatePacMan(PacMan pacman, int idRoom);
+    
+    void eliminateRoom(int idRoom);
+
+    public void removeRoom(int roomId);
+    
 }

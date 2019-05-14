@@ -72,4 +72,9 @@ public class PacWarServicesImpl implements PacWarServices {
         return main.getBackGroundItems(idRoom);
     }
 
+    @Override
+    public void removeRoom(int roomId) {
+        main.removeRoom(roomId);
+    }
+
 }

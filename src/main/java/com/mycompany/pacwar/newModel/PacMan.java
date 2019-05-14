@@ -22,8 +22,10 @@ public class PacMan extends Element{
     
     private float health = 100;
     
+    private boolean dead = false;
+    
     public void addVelocity(){
-        velocity+=10;
+        velocity+=1;
     }
     
     public void addHealth(){
@@ -56,6 +58,19 @@ public class PacMan extends Element{
                 dirrection = 'D';
             }
         }
+    }
+    
+    public boolean coliPacs(PacMan this, PacMan pacMan2, int key) {
+        boolean touch = false;
+        if (key == 38) {//UP
+            if (Block.colision(this.posX, this.posY - this.velocity, this.posX + this.size, this.posY + this.size - this.velocity, this.posX, pacMan2.posY, pacMan2.posX + pacMan2.size, pacMan2.posY + pacMan2.size)) {
+                touch = true;
+            }
+        }
+        if (touch) {
+            pacMan2.subtractHealth();
+        }
+        return true;
     }
 
     public String getId() {
@@ -100,5 +115,13 @@ public class PacMan extends Element{
 
     public void setHealth(float health) {
         this.health = health;
+    }
+    
+    public boolean isDead(){
+        if(health<=0){
+            dead = true;
+            return dead;
+        }
+        return dead;
     }
 }

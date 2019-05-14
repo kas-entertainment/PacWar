@@ -25,7 +25,7 @@ function getCharRooms(){
 
 function getRooms() {
     axios.get("/pacwar/game/rooms")
-        .then(function (response) {
+        .then(async function (response) {
             var agregar = "";
             for(var i = 0; i<response.data.length;i++){
                 agregar += "<button onclick='toRoom("+response.data[i].idRoom+")' class=\"btn btn-outline-secondary my-2 my-sm-0\" style=\"background-color: #5a6268; color: #ffffff\"> "+response.data[i].idRoom+"</button>"

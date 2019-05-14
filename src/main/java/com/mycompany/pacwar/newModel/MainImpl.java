@@ -59,7 +59,8 @@ public class MainImpl implements Main{
         }
         return backGroundItems;
     }
-
+    
+    
     @Override
     public void eliminateDot(Dot dot, int idRoom) {
         pwmc.sendDeleteDot(dot,idRoom);
@@ -74,5 +75,22 @@ public class MainImpl implements Main{
     public void eliminateStar(Star star, int idRoom) {
         pwmc.sendDeleteStar(star,idRoom);
     }
+    
+    @Override
+    public void eliminatePacMan(PacMan pacman, int idRoom) {
+        pwmc.sendDeletePacMan(pacman,idRoom);
+    }
+
+    @Override
+    public void eliminateRoom(int idRoom) {
+        pwmc.sendDeleteRoom(idRoom);
+    }
+
+    @Override
+    public void removeRoom(int roomId) {
+        rooms.remove(roomId);
+    }
+    
+    
 
 }
