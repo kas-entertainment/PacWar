@@ -6,8 +6,8 @@ import java.util.ArrayList;
 public class Room {
     private int idRoom;
     private ArrayList<PacMan> pacmans = new ArrayList<>();
-    public static int width = 42;
-    public static int height = 23;
+    public static int width = 32;//42
+    public static int height = 13;//23
     private ArrayList<BackGroundItem> backGroundItems=new ArrayList<>();
     private Main main;
 

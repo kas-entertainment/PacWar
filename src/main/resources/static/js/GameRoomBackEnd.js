@@ -25,33 +25,13 @@ function connectAndSuscribe() {
     stompClient = Stomp.over(socket);
     stompClient.connect({}, function(frame){
         stompClient.subscribe("/topic/move."+sessionStorage.getItem("room"),function(message){
-            var paramstr = window.location.search.substr(1);
-            var paramarr = paramstr.split ("&");
-            var params = {};
-            for ( var i = 0; i < paramarr.length; i++) {
-                var tmparr = paramarr[i].split("=");
-                params[tmparr[0]] = tmparr[1];
-            }
-            if(params[tmparr[0]]=="pacman"){
-                moverPacMan(JSON.parse(message.body));
-            }else{
-                moverGhost(JSON.parse(message.body));   
-            }
+            moverPacMan(JSON.parse(message.body));
+            moverGhost(JSON.parse(message.body));
         });
         
         stompClient.subscribe("/topic/newpacman."+sessionStorage.getItem("room"), function (message) {
-            var paramstr = window.location.search.substr(1);
-            var paramarr = paramstr.split ("&");
-            var params = {};
-            for ( var i = 0; i < paramarr.length; i++) {
-                var tmparr = paramarr[i].split("=");
-                params[tmparr[0]] = tmparr[1];
-            }
-            if(params[tmparr[0]]=="pacman"){
                 putPacMan(JSON.parse(message.body));
-            }else{
                 putGhost(JSON.parse(message.body));
-            }
         });
         stompClient.subscribe("/topic/deletedot."+sessionStorage.getItem("room"),function (message) {
             deleteDot(JSON.parse(message.body));
